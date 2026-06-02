@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://detpa4qnk63je"]
+[gd_resource type="Theme" format=3 uid="uid://detpa4qnk63je"]
 
 [ext_resource type="FontFile" uid="uid://cbkdh5trsa05g" path="res://misc_assets/fonts/inter_tight/InterTight-Bold.ttf" id="1_kiuew"]
 [ext_resource type="FontFile" uid="uid://7iv5p5kr2x2s" path="res://misc_assets/fonts/inter_tight/InterTight-Regular.ttf" id="1_lv2wa"]

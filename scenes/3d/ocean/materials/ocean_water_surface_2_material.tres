@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://b7ouij5aedu01"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://b7ouij5aedu01"]
 
 [ext_resource type="Shader" uid="uid://de5ni7qib38cp" path="res://scenes/3d/ocean/materials/water_surface_highlights_shader.gdshader" id="1_nnmum"]
 [ext_resource type="Texture2D" uid="uid://bj7yakxqu1yt6" path="res://scenes/3d/ocean/textures/ocean_surface_water_layer_0.png" id="2_k7u1s"]

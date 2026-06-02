@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dnnemhl23km37"]
+[gd_scene format=3 uid="uid://dnnemhl23km37"]
 
 [ext_resource type="ArrayMesh" uid="uid://cb4apjeh0c64x" path="res://scenes/3d/animals/whales/blue/mesh/Mesh_004.res" id="1_f8nv6"]
 [ext_resource type="Material" uid="uid://c08jd57ttiggi" path="res://scenes/3d/animals/whales/blue/materials/blue_whale_low_mat.tres" id="2_8lfbg"]
@@ -16200,15 +16200,15 @@ _data = {
 &"whale|twist2": SubResource("Animation_kuedu")
 }
 
-[node name="BlueWhale" type="Node3D"]
+[node name="BlueWhale" type="Node3D" unique_id=1079447419]
 
-[node name="blue_whale" type="Node3D" parent="."]
+[node name="blue_whale" type="Node3D" parent="." unique_id=608473079]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
-[node name="whale" type="Node3D" parent="blue_whale"]
+[node name="whale" type="Node3D" parent="blue_whale" unique_id=487663176]
 transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
 
-[node name="Skeleton3D" type="Skeleton3D" parent="blue_whale/whale"]
+[node name="Skeleton3D" type="Skeleton3D" parent="blue_whale/whale" unique_id=412251937]
 bones/0/name = "Root"
 bones/0/parent = -1
 bones/0/rest = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
@@ -17057,9 +17057,10 @@ bones/120/position = Vector3(0, 0.030944, 0)
 bones/120/rotation = Quaternion(0, 0, 0, 1)
 bones/120/scale = Vector3(1, 1, 1)
 
-[node name="bluewhale_skin" type="MeshInstance3D" parent="blue_whale/whale/Skeleton3D"]
+[node name="bluewhale_skin" type="MeshInstance3D" parent="blue_whale/whale/Skeleton3D" unique_id=686214462]
 mesh = ExtResource("1_f8nv6")
 skin = SubResource("Skin_fejak")
+skeleton = NodePath("..")
 surface_material_override/0 = ExtResource("2_8lfbg")
 surface_material_override/1 = ExtResource("2_8lfbg")
 surface_material_override/2 = ExtResource("2_8lfbg")
@@ -17068,8 +17069,6 @@ script = ExtResource("3_mikg6")
 low_quality_materials = Array[Material]([ExtResource("2_8lfbg"), ExtResource("2_8lfbg"), ExtResource("2_8lfbg"), ExtResource("2_8lfbg")])
 high_quality_materials = Array[Material]([ExtResource("4_qul07"), ExtResource("4_qul07"), ExtResource("4_qul07"), ExtResource("4_qul07")])
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="blue_whale"]
-libraries = {
-&"": SubResource("AnimationLibrary_hhdhh")
-}
-autoplay = "whale|swim1"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="blue_whale" unique_id=1655209204]
+libraries/ = SubResource("AnimationLibrary_hhdhh")
+autoplay = &"whale|swim1"

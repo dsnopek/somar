@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cuwcpccmansiv"]
+[gd_scene format=3 uid="uid://cuwcpccmansiv"]
 
 [ext_resource type="Script" uid="uid://cudao011r5kj3" path="res://scenes/3d/main_menu/return_to_main_menu.gd" id="1_0ma4e"]
 [ext_resource type="Script" uid="uid://b3ekuaycvco88" path="res://utilities/CustomBtn.gd" id="2_ewjf2"]
@@ -22,10 +22,10 @@ height = 0.0384233
 height = 0.038
 radius = 1.25
 
-[node name="ReturnToMainMenu" type="Node3D" groups=["change_with_input"]]
+[node name="ReturnToMainMenu" type="Node3D" unique_id=1983348148 groups=["change_with_input"]]
 script = ExtResource("1_0ma4e")
 
-[node name="ReturnToMainMenuBtn" type="Area3D" parent="."]
+[node name="ReturnToMainMenuBtn" type="Area3D" parent="." unique_id=923830823]
 unique_name_in_owner = true
 transform = Transform3D(0.8, 0, 0, 0, -2.38419e-07, 0.8, 0, -0.8, -2.38419e-07, 0, 0, 0)
 collision_layer = 4
@@ -34,13 +34,13 @@ monitoring = false
 script = ExtResource("2_ewjf2")
 hover_press_target_border_size = 0.3
 
-[node name="BtnBackground" type="MeshInstance3D" parent="ReturnToMainMenuBtn"]
+[node name="BtnBackground" type="MeshInstance3D" parent="ReturnToMainMenuBtn" unique_id=2013382623]
 sorting_offset = 1.0
 material_override = SubResource("ShaderMaterial_wvm6j")
 mesh = SubResource("QuadMesh_xhagw")
 skeleton = NodePath("../../..")
 
-[node name="BtnLabel" type="Label3D" parent="ReturnToMainMenuBtn"]
+[node name="BtnLabel" type="Label3D" parent="ReturnToMainMenuBtn" unique_id=555997394]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00219971)
 pixel_size = 0.001
 double_sided = false
@@ -54,16 +54,16 @@ outline_size = 10
 autowrap_mode = 2
 width = 600.0
 
-[node name="BtnCollisionShape" type="CollisionShape3D" parent="ReturnToMainMenuBtn"]
+[node name="BtnCollisionShape" type="CollisionShape3D" parent="ReturnToMainMenuBtn" unique_id=285339387]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 shape = SubResource("CylinderShape3D_wn0rk")
 
-[node name="BGArea" type="Area3D" parent="."]
+[node name="BGArea" type="Area3D" parent="." unique_id=1566038364]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0404669, 0)
 collision_layer = 4
 collision_mask = 0
 monitoring = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="BGArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BGArea" unique_id=616901725]
 shape = SubResource("CylinderShape3D_tw23b")

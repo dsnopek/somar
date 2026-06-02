@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cs5du2hvtk00v"]
+[gd_scene format=3 uid="uid://cs5du2hvtk00v"]
 
 [ext_resource type="Script" uid="uid://bpc3inpny3d58" path="res://scenes/3d/animals/tunas/tuna.gd" id="1_84bgp"]
 [ext_resource type="ArrayMesh" uid="uid://bu1nd4gncq5jr" path="res://scenes/3d/animals/tunas/mesh/Mesh_006.res" id="2_utlch"]
@@ -10992,16 +10992,16 @@ _data = {
 &"Fish|swim_turn_R_start": SubResource("Animation_pbpug")
 }
 
-[node name="Tuna" type="Node3D"]
+[node name="Tuna" type="Node3D" unique_id=1800091206]
 script = ExtResource("1_84bgp")
 
-[node name="tuna" type="Node3D" parent="."]
+[node name="tuna" type="Node3D" parent="." unique_id=594241798]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
 
-[node name="Fish" type="Node3D" parent="tuna"]
+[node name="Fish" type="Node3D" parent="tuna" unique_id=1254523443]
 transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
 
-[node name="Skeleton3D" type="Skeleton3D" parent="tuna/Fish"]
+[node name="Skeleton3D" type="Skeleton3D" parent="tuna/Fish" unique_id=43650020]
 bones/0/name = "Root"
 bones/0/parent = -1
 bones/0/rest = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
@@ -12305,18 +12305,17 @@ bones/185/position = Vector3(0, 0.000282547, 0)
 bones/185/rotation = Quaternion(0, 0, 0, 1)
 bones/185/scale = Vector3(1, 1, 1)
 
-[node name="tuna_body_005" type="MeshInstance3D" parent="tuna/Fish/Skeleton3D"]
+[node name="tuna_body_005" type="MeshInstance3D" parent="tuna/Fish/Skeleton3D" unique_id=227223703]
 mesh = ExtResource("2_utlch")
 skin = SubResource("Skin_gndsb")
+skeleton = NodePath("..")
 surface_material_override/0 = ExtResource("3_yes1r")
 surface_material_override/1 = ExtResource("3_yes1r")
 script = ExtResource("3_8byp2")
 low_quality_materials = Array[Material]([ExtResource("3_yes1r"), ExtResource("3_yes1r")])
 high_quality_materials = Array[Material]([ExtResource("5_o7fma"), ExtResource("5_o7fma")])
 
-[node name="TunaAnimationPlayer" type="AnimationPlayer" parent="tuna"]
+[node name="TunaAnimationPlayer" type="AnimationPlayer" parent="tuna" unique_id=72250166]
 unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_2fwh0")
-}
-autoplay = "Fish|swim_A1"
+libraries/ = SubResource("AnimationLibrary_2fwh0")
+autoplay = &"Fish|swim_A1"

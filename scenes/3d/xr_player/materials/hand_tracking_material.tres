@@ -1,4 +1,4 @@
-[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://j5u0ym0rk04f"]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://j5u0ym0rk04f"]
 
 [ext_resource type="Shader" uid="uid://bmsed34sf57qk" path="res://scenes/3d/xr_player/materials/hand_outline.gdshader" id="1_v3ajf"]
 

@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://b6bsyyd4h318g"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://b6bsyyd4h318g"]
 
 [ext_resource type="Shader" uid="uid://330pvk6gxilt" path="res://scenes/3d/shared/materials/sunrays_shader.gdshader" id="1_26dj2"]
 [ext_resource type="Texture2D" uid="uid://c5ki50ed7dfnl" path="res://scenes/3d/shore/textures/sunrays_mask.png" id="2_wm3xu"]

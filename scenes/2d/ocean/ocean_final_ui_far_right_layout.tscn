@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://clg8f8ljkftkm"]
+[gd_scene format=3 uid="uid://clg8f8ljkftkm"]
 
 [ext_resource type="Texture2D" uid="uid://bdocdmd6hf3da" path="res://scenes/2d/textures/info_panel_bg.png" id="1_pgycl"]
 [ext_resource type="Texture2D" uid="uid://b1tm3srxjhp47" path="res://scenes/2d/textures/final_ui/final_ui_humpback-whale.png" id="2_fys00"]
@@ -7,19 +7,19 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yp67b"]
 texture = ExtResource("1_pgycl")
 
-[node name="OceanFinalUICenterLayout" type="Control"]
+[node name="OceanFinalUICenterLayout" type="Control" unique_id=832426026]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 
-[node name="BackgroundPanel" type="Panel" parent="."]
+[node name="BackgroundPanel" type="Panel" parent="." unique_id=1610069116]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_yp67b")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1957162176]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
@@ -28,38 +28,38 @@ theme_override_constants/margin_top = 19
 theme_override_constants/margin_right = 40
 theme_override_constants/margin_bottom = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=747438739]
 layout_mode = 2
 
-[node name="ImageContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="ImageContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2040065674]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="Animal" type="TextureRect" parent="MarginContainer/VBoxContainer/ImageContainer"]
+[node name="Animal" type="TextureRect" parent="MarginContainer/VBoxContainer/ImageContainer" unique_id=1332857343]
 layout_mode = 2
 texture = ExtResource("2_fys00")
 
-[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1431010808]
 layout_mode = 2
 theme = ExtResource("3_3j1k3")
 theme_type_variation = &"TitleLabel"
 text = "OCEAN_FINAL_UI_FR_LOC_NAME"
 horizontal_alignment = 1
 
-[node name="Size" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Size" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=7406546]
 layout_mode = 2
 theme_override_constants/separation = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Size"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Size" unique_id=963434684]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Size/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Size/VBoxContainer" unique_id=853715289]
 layout_mode = 2
 theme = ExtResource("3_3j1k3")
 theme_type_variation = &"LabelLabel"
 text = "OCEAN_FINAL_UI_FR_SIZE_LABEL"
 
-[node name="Content" type="Label" parent="MarginContainer/VBoxContainer/Size"]
+[node name="Content" type="Label" parent="MarginContainer/VBoxContainer/Size" unique_id=1665531092]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_3j1k3")
@@ -67,20 +67,20 @@ theme_type_variation = &"ContentLabel"
 text = "OCEAN_FINAL_UI_FR_SIZE_CONTENT"
 autowrap_mode = 2
 
-[node name="Weight" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Weight" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=872687379]
 layout_mode = 2
 theme_override_constants/separation = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Weight"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Weight" unique_id=934125601]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Weight/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Weight/VBoxContainer" unique_id=1440615609]
 layout_mode = 2
 theme = ExtResource("3_3j1k3")
 theme_type_variation = &"LabelLabel"
 text = "OCEAN_FINAL_UI_FR_WEIGHT_LABEL"
 
-[node name="Content" type="Label" parent="MarginContainer/VBoxContainer/Weight"]
+[node name="Content" type="Label" parent="MarginContainer/VBoxContainer/Weight" unique_id=1173701271]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_3j1k3")
@@ -88,20 +88,20 @@ theme_type_variation = &"ContentLabel"
 text = "OCEAN_FINAL_UI_FR_WEIGHT_CONTENT"
 autowrap_mode = 2
 
-[node name="Diet" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Diet" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=564618619]
 layout_mode = 2
 theme_override_constants/separation = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Diet"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Diet" unique_id=1644540443]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Diet/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Diet/VBoxContainer" unique_id=1376162308]
 layout_mode = 2
 theme = ExtResource("3_3j1k3")
 theme_type_variation = &"LabelLabel"
 text = "OCEAN_FINAL_UI_FR_DIET_LABEL"
 
-[node name="Content" type="Label" parent="MarginContainer/VBoxContainer/Diet"]
+[node name="Content" type="Label" parent="MarginContainer/VBoxContainer/Diet" unique_id=956061020]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_3j1k3")
@@ -109,20 +109,20 @@ theme_type_variation = &"ContentLabel"
 text = "OCEAN_FINAL_UI_FR_DIET_CONTENT"
 autowrap_mode = 2
 
-[node name="Habitat" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Habitat" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1963751422]
 layout_mode = 2
 theme_override_constants/separation = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Habitat"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Habitat" unique_id=1125128853]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Habitat/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Habitat/VBoxContainer" unique_id=250710078]
 layout_mode = 2
 theme = ExtResource("3_3j1k3")
 theme_type_variation = &"LabelLabel"
 text = "OCEAN_FINAL_UI_FR_HABITAT_LABEL"
 
-[node name="Content" type="Label" parent="MarginContainer/VBoxContainer/Habitat"]
+[node name="Content" type="Label" parent="MarginContainer/VBoxContainer/Habitat" unique_id=1563341494]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_3j1k3")
@@ -130,20 +130,20 @@ theme_type_variation = &"ContentLabel"
 text = "OCEAN_FINAL_UI_FR_HABITAT_CONTENT"
 autowrap_mode = 2
 
-[node name="Fact" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Fact" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2123481656]
 layout_mode = 2
 theme_override_constants/separation = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Fact"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Fact" unique_id=1649306217]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Fact/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Fact/VBoxContainer" unique_id=1301284782]
 layout_mode = 2
 theme = ExtResource("3_3j1k3")
 theme_type_variation = &"LabelLabel"
 text = "OCEAN_FINAL_UI_FR_FACT_LABEL"
 
-[node name="Content" type="Label" parent="MarginContainer/VBoxContainer/Fact"]
+[node name="Content" type="Label" parent="MarginContainer/VBoxContainer/Fact" unique_id=148670500]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("3_3j1k3")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwjj8ynqrwpcv"]
+[gd_scene format=3 uid="uid://dwjj8ynqrwpcv"]
 
 [ext_resource type="Texture2D" uid="uid://bdocdmd6hf3da" path="res://scenes/2d/textures/info_panel_bg.png" id="1_u1w7j"]
 [ext_resource type="Texture2D" uid="uid://dwg6g5phn4bd0" path="res://scenes/2d/textures/final_ui/final_ui_minke-whale.png" id="2_obghe"]
@@ -9,19 +9,19 @@ texture = ExtResource("1_u1w7j")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_06bpo"]
 
-[node name="ShoreFinalUIRightLayout" type="Control"]
+[node name="ShoreFinalUIRightLayout" type="Control" unique_id=88940784]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 
-[node name="BackgroundPanel" type="Panel" parent="."]
+[node name="BackgroundPanel" type="Panel" parent="." unique_id=1964857454]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_yp67b")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=606554266]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
@@ -30,43 +30,43 @@ theme_override_constants/margin_top = 75
 theme_override_constants/margin_right = 75
 theme_override_constants/margin_bottom = 75
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2044780242]
 layout_mode = 2
 
-[node name="ImageContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="ImageContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2022063456]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="Animal" type="TextureRect" parent="MarginContainer/VBoxContainer/ImageContainer"]
+[node name="Animal" type="TextureRect" parent="MarginContainer/VBoxContainer/ImageContainer" unique_id=1657577962]
 layout_mode = 2
 texture = ExtResource("2_obghe")
 
-[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1005562675]
 layout_mode = 2
 theme = ExtResource("2_x03qk")
 theme_type_variation = &"TitleLabel"
 text = "SHORE_FINAL_UI_R_LOC_NAME"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=357977547]
 layout_mode = 2
 theme_override_constants/separation = 41
 theme_override_styles/separator = SubResource("StyleBoxEmpty_06bpo")
 
-[node name="Size" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Size" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=687514810]
 layout_mode = 2
 theme_override_constants/separation = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Size"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Size" unique_id=754053746]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Size/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Size/VBoxContainer" unique_id=1778412824]
 layout_mode = 2
 theme = ExtResource("2_x03qk")
 theme_type_variation = &"LabelLabel"
 text = "SHORE_FINAL_UI_R_SIZE_LABEL"
 
-[node name="Content" type="Label" parent="MarginContainer/VBoxContainer/Size"]
+[node name="Content" type="Label" parent="MarginContainer/VBoxContainer/Size" unique_id=950727215]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("2_x03qk")
@@ -74,20 +74,20 @@ theme_type_variation = &"ContentLabel"
 text = "SHORE_FINAL_UI_R_SIZE_CONTENT"
 autowrap_mode = 2
 
-[node name="Weight" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Weight" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=979363294]
 layout_mode = 2
 theme_override_constants/separation = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Weight"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Weight" unique_id=1487083060]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Weight/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Weight/VBoxContainer" unique_id=1104524253]
 layout_mode = 2
 theme = ExtResource("2_x03qk")
 theme_type_variation = &"LabelLabel"
 text = "SHORE_FINAL_UI_R_WEIGHT_LABEL"
 
-[node name="Content" type="Label" parent="MarginContainer/VBoxContainer/Weight"]
+[node name="Content" type="Label" parent="MarginContainer/VBoxContainer/Weight" unique_id=606642279]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("2_x03qk")
@@ -95,20 +95,20 @@ theme_type_variation = &"ContentLabel"
 text = "SHORE_FINAL_UI_R_WEIGHT_CONTENT"
 autowrap_mode = 2
 
-[node name="Diet" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Diet" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2011034037]
 layout_mode = 2
 theme_override_constants/separation = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Diet"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Diet" unique_id=645615250]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Diet/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Diet/VBoxContainer" unique_id=968566288]
 layout_mode = 2
 theme = ExtResource("2_x03qk")
 theme_type_variation = &"LabelLabel"
 text = "SHORE_FINAL_UI_R_DIET_LABEL"
 
-[node name="Content" type="Label" parent="MarginContainer/VBoxContainer/Diet"]
+[node name="Content" type="Label" parent="MarginContainer/VBoxContainer/Diet" unique_id=1970359953]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("2_x03qk")
@@ -116,20 +116,20 @@ theme_type_variation = &"ContentLabel"
 text = "SHORE_FINAL_UI_R_DIET_CONTENT"
 autowrap_mode = 2
 
-[node name="Habitat" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Habitat" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1798922576]
 layout_mode = 2
 theme_override_constants/separation = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Habitat"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Habitat" unique_id=598681352]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Habitat/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Habitat/VBoxContainer" unique_id=2030138445]
 layout_mode = 2
 theme = ExtResource("2_x03qk")
 theme_type_variation = &"LabelLabel"
 text = "SHORE_FINAL_UI_R_HABITAT_LABEL"
 
-[node name="Content" type="Label" parent="MarginContainer/VBoxContainer/Habitat"]
+[node name="Content" type="Label" parent="MarginContainer/VBoxContainer/Habitat" unique_id=1082529485]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("2_x03qk")
@@ -137,20 +137,20 @@ theme_type_variation = &"ContentLabel"
 text = "SHORE_FINAL_UI_R_HABITAT_CONTENT"
 autowrap_mode = 2
 
-[node name="Fact" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Fact" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1436384868]
 layout_mode = 2
 theme_override_constants/separation = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Fact"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Fact" unique_id=481067532]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Fact/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Fact/VBoxContainer" unique_id=634820467]
 layout_mode = 2
 theme = ExtResource("2_x03qk")
 theme_type_variation = &"LabelLabel"
 text = "SHORE_FINAL_UI_R_FACT_LABEL"
 
-[node name="Content" type="Label" parent="MarginContainer/VBoxContainer/Fact"]
+[node name="Content" type="Label" parent="MarginContainer/VBoxContainer/Fact" unique_id=704853908]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("2_x03qk")

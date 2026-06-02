@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6awqj31vy0t6"]
+[gd_scene format=3 uid="uid://b6awqj31vy0t6"]
 
 [ext_resource type="Script" uid="uid://cs5qlo75k518o" path="res://addons/export_plugin/scene_config_menu/scenes/blue_whale_item.gd" id="1_e0pwv"]
 
@@ -17,18 +17,18 @@ data = {
 [sub_resource type="ImageTexture" id="ImageTexture_4p7nk"]
 image = SubResource("Image_oesfw")
 
-[node name="BlueWhaleItem" type="PanelContainer"]
+[node name="BlueWhaleItem" type="PanelContainer" unique_id=537970124]
 theme_override_styles/panel = SubResource("StyleBoxFlat_lj4ik")
 script = ExtResource("1_e0pwv")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=110433063]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=944267663]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="ToggleButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="ToggleButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=973731457]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -36,12 +36,12 @@ text = "Blue whale"
 icon = SubResource("ImageTexture_4p7nk")
 alignment = 0
 
-[node name="EnabledButton" type="CheckButton" parent="VBoxContainer/HBoxContainer"]
+[node name="EnabledButton" type="CheckButton" parent="VBoxContainer/HBoxContainer" unique_id=61428824]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Enabled: "
 
-[node name="ContentContainer" type="MarginContainer" parent="VBoxContainer"]
+[node name="ContentContainer" type="MarginContainer" parent="VBoxContainer" unique_id=809457808]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -50,19 +50,19 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ContentContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ContentContainer" unique_id=1667518103]
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/ContentContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/ContentContainer/VBoxContainer" unique_id=1644611989]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 8
 
-[node name="Label" type="Label" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer2" unique_id=365596429]
 layout_mode = 2
 text = "Travel time:"
 
-[node name="TravelTimeSpinBox" type="SpinBox" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer2"]
+[node name="TravelTimeSpinBox" type="SpinBox" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer2" unique_id=1184315215]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3

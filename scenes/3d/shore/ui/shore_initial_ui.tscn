@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://vuoju6i7tukd"]
+[gd_scene format=3 uid="uid://vuoju6i7tukd"]
 
 [ext_resource type="Script" uid="uid://djofnpb8h11u8" path="res://scenes/3d/shore/ui/shore_initial_ui.gd" id="1_ad3is"]
 [ext_resource type="PackedScene" uid="uid://gs4ji44u7lso" path="res://scenes/3d/info_plane/info_panel.tscn" id="1_i6drj"]
@@ -24,26 +24,26 @@ size = Vector3(0.5, 0.25, 0.015)
 [sub_resource type="BoxShape3D" id="BoxShape3D_b0mum"]
 size = Vector3(1, 2.49634, 0.0146484)
 
-[node name="InitialUI" type="Node3D"]
+[node name="InitialUI" type="Node3D" unique_id=76115904]
 script = ExtResource("1_ad3is")
 
-[node name="InfoPanel" parent="." instance=ExtResource("1_i6drj")]
+[node name="InfoPanel" parent="." unique_id=2067172202 instance=ExtResource("1_i6drj")]
 scene = ExtResource("3_y7m22")
 
-[node name="CloseBtn" type="Area3D" parent="."]
+[node name="CloseBtn" type="Area3D" parent="." unique_id=533638455]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.806571, 0)
 collision_layer = 4
 collision_mask = 0
 monitoring = false
 script = ExtResource("3_g5235")
 
-[node name="BtnBackground" type="MeshInstance3D" parent="CloseBtn"]
+[node name="BtnBackground" type="MeshInstance3D" parent="CloseBtn" unique_id=2117189834]
 sorting_offset = 1.0
 material_override = SubResource("ShaderMaterial_qh7bd")
 mesh = SubResource("QuadMesh_a8nwf")
 skeleton = NodePath("../../..")
 
-[node name="BtnLabel" type="Label3D" parent="CloseBtn"]
+[node name="BtnLabel" type="Label3D" parent="CloseBtn" unique_id=599697757]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00219971)
 pixel_size = 0.001
 double_sided = false
@@ -55,23 +55,23 @@ text = "CLOSE_LBL"
 font_size = 128
 outline_size = 8
 
-[node name="BtnCollisionShape" type="CollisionShape3D" parent="CloseBtn"]
+[node name="BtnCollisionShape" type="CollisionShape3D" parent="CloseBtn" unique_id=234014103]
 shape = SubResource("BoxShape3D_2k0qx")
 
-[node name="BGArea" type="Area3D" parent="."]
+[node name="BGArea" type="Area3D" parent="." unique_id=10246713]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0404669, 0)
 collision_layer = 4
 collision_mask = 0
 monitoring = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="BGArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BGArea" unique_id=1641718325]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.066602)
 shape = SubResource("BoxShape3D_b0mum")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="BGArea"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="BGArea" unique_id=1507685008]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 0.979443, 0, 0.062116)
 shape = SubResource("BoxShape3D_b0mum")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="BGArea"]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="BGArea" unique_id=1574290222]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -0.979, 0, 0.062)
 shape = SubResource("BoxShape3D_b0mum")

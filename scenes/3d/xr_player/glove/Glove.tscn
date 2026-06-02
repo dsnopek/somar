@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cmb7inmiduyap"]
+[gd_scene format=3 uid="uid://cmb7inmiduyap"]
 
 [ext_resource type="Script" uid="uid://dfl3a2gwc4o4x" path="res://scenes/3d/xr_player/glove/glove.gd" id="1_ywjng"]
 [ext_resource type="ArrayMesh" uid="uid://r2ae1p2bqbog" path="res://scenes/3d/xr_player/glove/mesh/gloves_animated_Mesh_005.res" id="2_ktth0"]
@@ -723,14 +723,14 @@ nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_0jc4y")
 nodes/TimeScale/position = Vector2(220, 160)
 node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"StateMachine"]
 
-[node name="Glove" type="Node3D"]
+[node name="Glove" type="Node3D" unique_id=412617746]
 script = ExtResource("1_ywjng")
 
-[node name="gloves_animated" type="Node3D" parent="."]
+[node name="gloves_animated" type="Node3D" parent="." unique_id=741821942]
 
-[node name="Armature" type="Node3D" parent="gloves_animated"]
+[node name="Armature" type="Node3D" parent="gloves_animated" unique_id=406096362]
 
-[node name="Skeleton3D" type="Skeleton3D" parent="gloves_animated/Armature"]
+[node name="Skeleton3D" type="Skeleton3D" parent="gloves_animated/Armature" unique_id=103292911]
 bones/0/name = "Bone"
 bones/0/parent = -1
 bones/0/rest = Transform3D(0.258391, 0.0148791, -0.965928, -0.964328, -0.0555309, -0.25882, -0.0574898, 0.998346, -2.38419e-07, -0.000295815, 0.00453583, -0.0795742)
@@ -907,20 +907,19 @@ bones/24/position = Vector3(-3.72529e-09, 0.0285445, -5.58794e-09)
 bones/24/rotation = Quaternion(0.0337474, 0.0216061, -0.090345, 0.995104)
 bones/24/scale = Vector3(1, 1, 1)
 
-[node name="Glove" type="MeshInstance3D" parent="gloves_animated/Armature/Skeleton3D"]
+[node name="Glove" type="MeshInstance3D" parent="gloves_animated/Armature/Skeleton3D" unique_id=578383189]
 mesh = ExtResource("2_ktth0")
 skin = SubResource("Skin_5700v")
+skeleton = NodePath("..")
 surface_material_override/0 = ExtResource("3_4b6rw")
 script = ExtResource("4_3bg08")
 low_quality_materials = Array[Material]([ExtResource("3_4b6rw")])
 high_quality_materials = Array[Material]([ExtResource("5_lqdg8")])
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="gloves_animated"]
-libraries = {
-&"": SubResource("AnimationLibrary_jdy45")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="gloves_animated" unique_id=578503985]
+libraries/ = SubResource("AnimationLibrary_jdy45")
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=975326728]
 root_node = NodePath("../gloves_animated")
 tree_root = SubResource("AnimationNodeBlendTree_arpvu")
 advance_expression_base_node = NodePath("..")

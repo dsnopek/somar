@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://ddwg6tv1r3h1x"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://ddwg6tv1r3h1x"]
 
 [ext_resource type="Shader" uid="uid://cwrv6gebmho45" path="res://scenes/3d/shared/materials/base_shader_col_nrm_rough_metal.gdshader" id="1_nyfon"]
 [ext_resource type="Texture2D" uid="uid://dv00u01hya2w2" path="res://scenes/3d/boats/inflatable_patrol/textures/MergedBake_Bake1_PBR_Diffuse_1k.png" id="2_hqitk"]

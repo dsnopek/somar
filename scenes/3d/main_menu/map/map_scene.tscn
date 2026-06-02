@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://kp675oye12no"]
+[gd_scene format=3 uid="uid://kp675oye12no"]
 
 [ext_resource type="Script" uid="uid://cyicthcmwpts1" path="res://scenes/3d/main_menu/map/map_scene.gd" id="1_gmoac"]
 [ext_resource type="Texture2D" uid="uid://bctpc6245g6r5" path="res://scenes/3d/main_menu/map/textures/map_scene_skybox_1k.png" id="2_smvuo"]
@@ -175,33 +175,32 @@ _data = {
 &"show_markers": SubResource("Animation_0ihxd")
 }
 
-[node name="MapScene" type="Node3D" node_paths=PackedStringArray("player_position") groups=["change_with_input", "menu_btn_listeners"]]
+[node name="MapScene" type="Node3D" unique_id=350802767 node_paths=PackedStringArray("player_position") groups=["change_with_input", "menu_btn_listeners"]]
 script = ExtResource("1_gmoac")
 player_position = NodePath("PlayerPosition")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1863068175]
 environment = SubResource("Environment_x7grc")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2066306735]
 transform = Transform3D(1, 0, 0, 0, -0.173648, 0.984808, 0, -0.984808, -0.173648, 0, 17.7126, 0)
 
-[node name="map_subdiv_v2" type="Node3D" parent="."]
+[node name="map_subdiv_v2" type="Node3D" parent="." unique_id=754114383]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 0, 1.35, 0)
 
-[node name="MapMesh_subdiv_v2" type="MeshInstance3D" parent="map_subdiv_v2"]
+[node name="MapMesh_subdiv_v2" type="MeshInstance3D" parent="map_subdiv_v2" unique_id=1708801416]
 transform = Transform3D(0.1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = ExtResource("3_72qg8")
-skeleton = NodePath("")
 surface_material_override/0 = ExtResource("3_sv1kv")
 script = ExtResource("5_tjyeu")
 low_quality_materials = Array[Material]([ExtResource("3_sv1kv")])
 high_quality_materials = Array[Material]([ExtResource("3_8ytoh")])
 
-[node name="UIContainer" type="Node3D" parent="."]
+[node name="UIContainer" type="Node3D" parent="." unique_id=1643666482]
 unique_name_in_owner = true
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 6.915, -0.5)
 
-[node name="OceanBtn" type="Area3D" parent="UIContainer" node_paths=PackedStringArray("mesh_override")]
+[node name="OceanBtn" type="Area3D" parent="UIContainer" unique_id=654391649 node_paths=PackedStringArray("mesh_override")]
 unique_name_in_owner = true
 transform = Transform3D(-4.2222e-08, -1.13133e-08, -1, -0.258819, 0.965926, -2.66454e-15, 0.965926, 0.258819, -4.37114e-08, 5.53488, 0.000430107, 0.625531)
 collision_layer = 4
@@ -211,16 +210,16 @@ script = ExtResource("5_mr1yy")
 hover_press_target_border_size = 0.125
 mesh_override = NodePath("Node3D/BtnBackground")
 
-[node name="Node3D" type="Node3D" parent="UIContainer/OceanBtn"]
+[node name="Node3D" type="Node3D" parent="UIContainer/OceanBtn" unique_id=1322270830]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 
-[node name="BtnBackground" type="MeshInstance3D" parent="UIContainer/OceanBtn/Node3D"]
+[node name="BtnBackground" type="MeshInstance3D" parent="UIContainer/OceanBtn/Node3D" unique_id=937875776]
 sorting_offset = 1.0
 material_override = SubResource("ShaderMaterial_aia1t")
 mesh = SubResource("QuadMesh_w1wg7")
 skeleton = NodePath("../../../../..")
 
-[node name="BtnLabel" type="Label3D" parent="UIContainer/OceanBtn/Node3D"]
+[node name="BtnLabel" type="Label3D" parent="UIContainer/OceanBtn/Node3D" unique_id=1147950183]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.18504e-30, 0.60989, 0.00200081)
 pixel_size = 0.001
 double_sided = false
@@ -231,11 +230,11 @@ text = "OFFSHORE_LBL"
 font_size = 230
 outline_size = 20
 
-[node name="BtnCollisionShape" type="CollisionShape3D" parent="UIContainer/OceanBtn"]
+[node name="BtnCollisionShape" type="CollisionShape3D" parent="UIContainer/OceanBtn" unique_id=761003062]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 shape = SubResource("CylinderShape3D_d4y56")
 
-[node name="BtnLabel2" type="Label3D" parent="UIContainer/OceanBtn"]
+[node name="BtnLabel2" type="Label3D" parent="UIContainer/OceanBtn" unique_id=325974013]
 transform = Transform3D(1, 0, 0, 0, 7.665, 0, 0, 0, 1, 0, -1.03371, 0.00200081)
 pixel_size = 0.001
 double_sided = false
@@ -245,7 +244,7 @@ text = "|"
 font_size = 350
 outline_size = 32
 
-[node name="ShoreBtn" type="Area3D" parent="UIContainer" node_paths=PackedStringArray("mesh_override")]
+[node name="ShoreBtn" type="Area3D" parent="UIContainer" unique_id=2081995675 node_paths=PackedStringArray("mesh_override")]
 unique_name_in_owner = true
 transform = Transform3D(-4.2222e-08, 1.13133e-08, -1, 0.258819, 0.965926, -4.67586e-14, 0.965926, -0.258819, -4.37114e-08, 2.60786, 0.000430107, -0.891004)
 collision_layer = 4
@@ -255,16 +254,16 @@ script = ExtResource("5_mr1yy")
 hover_press_target_border_size = 0.125
 mesh_override = NodePath("Node3D/BtnBackground")
 
-[node name="Node3D" type="Node3D" parent="UIContainer/ShoreBtn"]
+[node name="Node3D" type="Node3D" parent="UIContainer/ShoreBtn" unique_id=1880324066]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 
-[node name="BtnBackground" type="MeshInstance3D" parent="UIContainer/ShoreBtn/Node3D"]
+[node name="BtnBackground" type="MeshInstance3D" parent="UIContainer/ShoreBtn/Node3D" unique_id=1717173952]
 sorting_offset = 1.0
 material_override = SubResource("ShaderMaterial_650v8")
 mesh = SubResource("QuadMesh_w1wg7")
 skeleton = NodePath("../../../../..")
 
-[node name="BtnLabel" type="Label3D" parent="UIContainer/ShoreBtn/Node3D"]
+[node name="BtnLabel" type="Label3D" parent="UIContainer/ShoreBtn/Node3D" unique_id=1253743345]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.76837e-07, 0.633191, 0.00200081)
 pixel_size = 0.001
 double_sided = false
@@ -275,7 +274,7 @@ text = "NEAR_THE_COAST_LBL"
 font_size = 230
 outline_size = 20
 
-[node name="BtnLabel2" type="Label3D" parent="UIContainer/ShoreBtn"]
+[node name="BtnLabel2" type="Label3D" parent="UIContainer/ShoreBtn" unique_id=1693543519]
 transform = Transform3D(1, 0, 0, 0, 7.665, 0, 0, 0, 1, 9.53674e-07, -1.04367, 0.00200176)
 pixel_size = 0.001
 double_sided = false
@@ -285,11 +284,11 @@ text = "|"
 font_size = 350
 outline_size = 32
 
-[node name="BtnCollisionShape" type="CollisionShape3D" parent="UIContainer/ShoreBtn"]
+[node name="BtnCollisionShape" type="CollisionShape3D" parent="UIContainer/ShoreBtn" unique_id=2047913580]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 shape = SubResource("CylinderShape3D_d4y56")
 
-[node name="ChooseDestinationLbl" type="Label3D" parent="UIContainer"]
+[node name="ChooseDestinationLbl" type="Label3D" parent="UIContainer" unique_id=1738767138]
 transform = Transform3D(3.6199901e-06, 0, 1, 0, -1, 0, 1, 0, -3.6199901e-06, 1.8, -0.607021, -1.77636e-15)
 pixel_size = 0.001
 double_sided = false
@@ -300,10 +299,10 @@ text = "MM_MAP_CHOOSE_DESTINATION"
 font_size = 223
 outline_size = 40
 
-[node name="PlayerPosition" type="Marker3D" parent="."]
+[node name="PlayerPosition" type="Marker3D" parent="." unique_id=147318097]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.605, 0)
 
-[node name="LicenseLbl" type="Label3D" parent="."]
+[node name="LicenseLbl" type="Label3D" parent="." unique_id=1561367113]
 transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 5.52334, -0.702152)
 pixel_size = 0.001
 double_sided = false
@@ -315,10 +314,10 @@ text = "Sentinel-2 cloudless - https://s2maps.eu by EOX IT Services GmbH
 font_size = 43
 outline_size = 3
 
-[node name="ChangeLanguageBtnContainer" type="Node3D" parent="."]
+[node name="ChangeLanguageBtnContainer" type="Node3D" parent="." unique_id=1536585620]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.605, 0)
 
-[node name="ChangeLanguageBtn" type="Area3D" parent="ChangeLanguageBtnContainer"]
+[node name="ChangeLanguageBtn" type="Area3D" parent="ChangeLanguageBtnContainer" unique_id=1444268663]
 unique_name_in_owner = true
 transform = Transform3D(0.8, 0, 0, 0, -2.38419e-07, 0.8, 0, -0.8, -2.38419e-07, 0, 0, 0)
 collision_layer = 4
@@ -327,13 +326,13 @@ monitoring = false
 script = ExtResource("5_mr1yy")
 hover_press_target_border_size = 0.3
 
-[node name="BtnBackground" type="MeshInstance3D" parent="ChangeLanguageBtnContainer/ChangeLanguageBtn"]
+[node name="BtnBackground" type="MeshInstance3D" parent="ChangeLanguageBtnContainer/ChangeLanguageBtn" unique_id=1864999276]
 sorting_offset = 1.0
 material_override = SubResource("ShaderMaterial_wvm6j")
 mesh = SubResource("QuadMesh_xhagw")
 skeleton = NodePath("../../..")
 
-[node name="BtnLabel" type="Label3D" parent="ChangeLanguageBtnContainer/ChangeLanguageBtn"]
+[node name="BtnLabel" type="Label3D" parent="ChangeLanguageBtnContainer/ChangeLanguageBtn" unique_id=1555143828]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00219971)
 pixel_size = 0.001
 double_sided = false
@@ -347,26 +346,24 @@ outline_size = 10
 autowrap_mode = 2
 width = 700.0
 
-[node name="BtnCollisionShape" type="CollisionShape3D" parent="ChangeLanguageBtnContainer/ChangeLanguageBtn"]
+[node name="BtnCollisionShape" type="CollisionShape3D" parent="ChangeLanguageBtnContainer/ChangeLanguageBtn" unique_id=1946321325]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 shape = SubResource("CylinderShape3D_wn0rk")
 
-[node name="BGArea" type="Area3D" parent="ChangeLanguageBtnContainer"]
+[node name="BGArea" type="Area3D" parent="ChangeLanguageBtnContainer" unique_id=627074621]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0404669, 0)
 collision_layer = 4
 collision_mask = 0
 monitoring = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ChangeLanguageBtnContainer/BGArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ChangeLanguageBtnContainer/BGArea" unique_id=1561689058]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.02979)
 shape = SubResource("BoxShape3D_s6ipm")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="ChangeLanguageBtnContainer/BGArea"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ChangeLanguageBtnContainer/BGArea" unique_id=1587751719]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.67584, -7.88002)
 shape = SubResource("BoxShape3D_tj5yq")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=504741025]
 unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_rrcqf")
-}
+libraries/ = SubResource("AnimationLibrary_rrcqf")
