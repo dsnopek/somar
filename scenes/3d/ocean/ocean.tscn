@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://c6y5y8pwspjr"]
+[gd_scene format=3 uid="uid://c6y5y8pwspjr"]
 
 [ext_resource type="Script" uid="uid://jebqlacwmhpe" path="res://scenes/3d/ocean/ocean.gd" id="1_qkda0"]
 [ext_resource type="Environment" uid="uid://yfafeqhg6bmg" path="res://scenes/3d/ocean/ocean_we.tres" id="2_hkvrg"]
@@ -64,7 +64,7 @@ _data = {
 }
 point_count = 5
 
-[node name="Ocean" type="Node3D" node_paths=PackedStringArray("initial_dolphins_pos", "boat_intercept_pos", "school_fish_path_follow", "school_fish", "boat_idle_path", "orcas_pod_path", "dolphin_audio_manager", "initial_ui", "final_ui", "player_position")]
+[node name="Ocean" type="Node3D" unique_id=209589741 node_paths=PackedStringArray("initial_dolphins_pos", "boat_intercept_pos", "school_fish_path_follow", "school_fish", "boat_idle_path", "orcas_pod_path", "dolphin_audio_manager", "initial_ui", "final_ui", "player_position")]
 script = ExtResource("1_qkda0")
 initial_dolphins_pos = NodePath("InitialDolphinsPos")
 boat_intercept_pos = NodePath("BoatInterceptPos")
@@ -80,99 +80,99 @@ initial_ui = NodePath("UI/OceanInitialUI")
 final_ui = NodePath("UI/OceanFinalUi")
 player_position = NodePath("PlayerPosition")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1845637601]
 transform = Transform3D(1, 0, 0, 0, -0.173648, 0.984808, 0, -0.984808, -0.173648, 0, 17.7126, 0)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=240566651]
 environment = ExtResource("2_hkvrg")
 
-[node name="SurfacePosition" type="Marker3D" parent="."]
+[node name="SurfacePosition" type="Marker3D" parent="." unique_id=738980996]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 8, 0)
 
-[node name="WaterSurface" type="MeshInstance3D" parent="SurfacePosition"]
+[node name="WaterSurface" type="MeshInstance3D" parent="SurfacePosition" unique_id=500277395]
 material_override = ExtResource("3_ufet6")
 mesh = SubResource("QuadMesh_20yxg")
 skeleton = NodePath("../..")
 
-[node name="WaterSurfaceHighlights" type="MeshInstance3D" parent="SurfacePosition"]
+[node name="WaterSurfaceHighlights" type="MeshInstance3D" parent="SurfacePosition" unique_id=50919142]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
 material_override = ExtResource("4_7wo7r")
 mesh = SubResource("QuadMesh_20yxg")
 skeleton = NodePath("../..")
 
-[node name="FakeSun" type="MeshInstance3D" parent="SurfacePosition"]
+[node name="FakeSun" type="MeshInstance3D" parent="SurfacePosition" unique_id=1256769625]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2)
 material_override = SubResource("ShaderMaterial_a531b")
 mesh = SubResource("QuadMesh_mmgpg")
 
-[node name="PlayerPosition" type="Marker3D" parent="."]
+[node name="PlayerPosition" type="Marker3D" parent="." unique_id=723162803]
 
-[node name="InitialDolphinsPos" type="Marker3D" parent="."]
+[node name="InitialDolphinsPos" type="Marker3D" parent="." unique_id=2100955347]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.5)
 
-[node name="BoatInterceptPos" type="Marker3D" parent="."]
+[node name="BoatInterceptPos" type="Marker3D" parent="." unique_id=1993770093]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -35)
 
-[node name="UI" type="Node3D" parent="."]
+[node name="UI" type="Node3D" parent="." unique_id=2027354543]
 
-[node name="OceanInitialUI" parent="UI" instance=ExtResource("8_b50c8")]
+[node name="OceanInitialUI" parent="UI" unique_id=820834865 instance=ExtResource("8_b50c8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.8)
 
-[node name="OceanFinalUi" parent="UI" instance=ExtResource("9_q1pty")]
+[node name="OceanFinalUi" parent="UI" unique_id=1457410498 instance=ExtResource("9_q1pty")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.8)
 
-[node name="ReturnToMainMenu" parent="." instance=ExtResource("7_jnhsx")]
+[node name="ReturnToMainMenu" parent="." unique_id=600556518 instance=ExtResource("7_jnhsx")]
 
-[node name="Dolphins" type="Node3D" parent="."]
+[node name="Dolphins" type="Node3D" parent="." unique_id=1540203491]
 unique_name_in_owner = true
 
-[node name="PathQuadrants" type="Node3D" parent="."]
+[node name="PathQuadrants" type="Node3D" parent="." unique_id=1639237693]
 unique_name_in_owner = true
 
-[node name="Q0" type="Path3D" parent="PathQuadrants"]
+[node name="Q0" type="Path3D" parent="PathQuadrants" unique_id=842737015]
 curve = ExtResource("8_aqbnn")
 metadata/quadrant_id = 0
 
-[node name="Q1" type="Path3D" parent="PathQuadrants"]
+[node name="Q1" type="Path3D" parent="PathQuadrants" unique_id=1010540136]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 curve = ExtResource("8_aqbnn")
 metadata/quadrant_id = 1
 
-[node name="Q2" type="Path3D" parent="PathQuadrants"]
+[node name="Q2" type="Path3D" parent="PathQuadrants" unique_id=1418139253]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
 curve = ExtResource("8_aqbnn")
 metadata/quadrant_id = 2
 
-[node name="Q3" type="Path3D" parent="PathQuadrants"]
+[node name="Q3" type="Path3D" parent="PathQuadrants" unique_id=42520185]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 0, 0, 0)
 curve = ExtResource("8_aqbnn")
 metadata/quadrant_id = 3
 
-[node name="Boats" type="Node3D" parent="."]
+[node name="Boats" type="Node3D" parent="." unique_id=848862484]
 unique_name_in_owner = true
 
-[node name="InflatablePatrolBoat" parent="Boats" instance=ExtResource("9_omrdy")]
+[node name="InflatablePatrolBoat" parent="Boats" unique_id=469729230 instance=ExtResource("9_omrdy")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 visible = false
 
-[node name="HumpbackWhalePath" parent="." instance=ExtResource("12_xgx7v")]
+[node name="HumpbackWhalePath" parent="." unique_id=1036037205 instance=ExtResource("12_xgx7v")]
 unique_name_in_owner = true
 process_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.75, 0)
 move_time = 180.0
 
-[node name="BlueWhalePath" parent="." instance=ExtResource("13_fim7d")]
+[node name="BlueWhalePath" parent="." unique_id=412973411 instance=ExtResource("13_fim7d")]
 unique_name_in_owner = true
 process_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.71307, 0)
 blue = true
 
-[node name="FishSchoolPath3D" type="Path3D" parent="."]
+[node name="FishSchoolPath3D" type="Path3D" parent="." unique_id=307594150]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, -6.0758)
 curve = SubResource("Curve3D_lv1u2")
 
-[node name="SchoolFishPathFollow3D" type="PathFollow3D" parent="FishSchoolPath3D"]
+[node name="SchoolFishPathFollow3D" type="PathFollow3D" parent="FishSchoolPath3D" unique_id=1425638829]
 transform = Transform3D(0.86067605, 0, 0.5088609, 0, 0.999993, 0, -0.5088609, 0, 0.86067605, -7.23551, -1.5000296, -2.66072)
 v_offset = -1.5
 rotation_mode = 1
@@ -182,10 +182,10 @@ vertical_movement_curve = SubResource("Curve_j6l5g")
 base_v_offset = -1.5
 loop_time = 180.0
 
-[node name="SchoolOfFish" parent="FishSchoolPath3D/SchoolFishPathFollow3D" instance=ExtResource("24_cmt7h")]
+[node name="SchoolOfFish" parent="FishSchoolPath3D/SchoolFishPathFollow3D" unique_id=1410235990 instance=ExtResource("24_cmt7h")]
 transform = Transform3D(0.9, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="DolphinAudioManager" type="Node3D" parent="."]
+[node name="DolphinAudioManager" type="Node3D" parent="." unique_id=425851350]
 script = ExtResource("16_4kyfy")
 clicking_sounds = Array[AudioStream]([ExtResource("17_ye8ud"), ExtResource("18_a4rg7"), ExtResource("19_yg5cj"), ExtResource("20_l8tf2"), ExtResource("21_efrot"), ExtResource("22_nlfq2")])
 clicking_rate = 0.75
@@ -195,14 +195,14 @@ whistles_sounds = Array[AudioStream]([ExtResource("20_faolv"), ExtResource("21_p
 whistling_rate = 0.3
 whistling_cooldown = 0.8
 
-[node name="BoatIdlePath" type="Path3D" parent="."]
+[node name="BoatIdlePath" type="Path3D" parent="." unique_id=1889196374]
 curve = SubResource("Curve3D_yolo5")
 
-[node name="PathFollow3D" type="PathFollow3D" parent="BoatIdlePath"]
+[node name="PathFollow3D" type="PathFollow3D" parent="BoatIdlePath" unique_id=252074050]
 rotation_mode = 4
 
-[node name="RemoteTransform3D" type="RemoteTransform3D" parent="BoatIdlePath/PathFollow3D"]
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="BoatIdlePath/PathFollow3D" unique_id=2045065271]
 update_scale = false
 
-[node name="OrcaPodPath" parent="." instance=ExtResource("25_v3vew")]
+[node name="OrcaPodPath" parent="." unique_id=1100865040 instance=ExtResource("25_v3vew")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.916304, -10.403)

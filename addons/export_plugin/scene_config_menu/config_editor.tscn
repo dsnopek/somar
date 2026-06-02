@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dgguranxrty84"]
+[gd_scene format=3 uid="uid://dgguranxrty84"]
 
 [ext_resource type="Script" uid="uid://7a84ae764r3e" path="res://addons/export_plugin/scene_config_menu/config_editor.gd" id="1_st416"]
 [ext_resource type="Theme" uid="uid://c7osqhiu57ov4" path="res://addons/export_plugin/scene_config_menu/themes/buttons_theme.tres" id="2_wymsl"]
@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cebieqdl0s2ev" path="res://addons/export_plugin/scene_config_menu/scenes/humpback_whale_item.tscn" id="4_r2mo2"]
 [ext_resource type="PackedScene" uid="uid://b6awqj31vy0t6" path="res://addons/export_plugin/scene_config_menu/scenes/blue_whale_item.tscn" id="5_tnbi5"]
 
-[node name="ConfigEditor" type="Panel"]
+[node name="ConfigEditor" type="Panel" unique_id=589726591]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -15,7 +15,7 @@ grow_vertical = 2
 size_flags_vertical = 3
 script = ExtResource("1_st416")
 
-[node name="InitialConfigContainer" type="CenterContainer" parent="."]
+[node name="InitialConfigContainer" type="CenterContainer" parent="." unique_id=1539786434]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -31,22 +31,22 @@ offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="InitialConfigFileDialog" type="FileDialog" parent="InitialConfigContainer"]
+[node name="InitialConfigFileDialog" type="FileDialog" parent="InitialConfigContainer" unique_id=349657860]
 unique_name_in_owner = true
 title = "Open a Directory"
 ok_button_text = "Select Current Folder"
 file_mode = 2
 use_native_dialog = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="InitialConfigContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="InitialConfigContainer" unique_id=1898721332]
 layout_mode = 2
 
-[node name="InitialConfigBtn" type="Button" parent="InitialConfigContainer/VBoxContainer"]
+[node name="InitialConfigBtn" type="Button" parent="InitialConfigContainer/VBoxContainer" unique_id=1161533841]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Add default config file"
 
-[node name="MainContainer" type="MarginContainer" parent="."]
+[node name="MainContainer" type="MarginContainer" parent="." unique_id=1559320626]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -60,143 +60,143 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer" unique_id=1296455687]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainContainer/VBoxContainer" unique_id=379431700]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="SaveBtn" type="Button" parent="MainContainer/VBoxContainer/HBoxContainer"]
+[node name="SaveBtn" type="Button" parent="MainContainer/VBoxContainer/HBoxContainer" unique_id=744234252]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_wymsl")
 theme_type_variation = &"GreenButton"
 text = "Save"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer" unique_id=1594639632]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="TabContainer" type="TabContainer" parent="MainContainer/VBoxContainer/VBoxContainer"]
+[node name="TabContainer" type="TabContainer" parent="MainContainer/VBoxContainer/VBoxContainer" unique_id=1124908865]
 layout_mode = 2
 size_flags_vertical = 3
 current_tab = 0
 
-[node name="Ocean" type="HSplitContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer"]
+[node name="Ocean" type="HSplitContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer" unique_id=1260506855]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 metadata/_tab_index = 0
 
-[node name="OceanTree" type="Tree" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean"]
+[node name="OceanTree" type="Tree" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean" unique_id=536384246]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.2
 
-[node name="OceanDefaultContainer" type="CenterContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean"]
+[node name="OceanDefaultContainer" type="CenterContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean" unique_id=21902024]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.8
 
-[node name="Label" type="Label" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanDefaultContainer"]
+[node name="Label" type="Label" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanDefaultContainer" unique_id=626288700]
 layout_mode = 2
 text = "Select something!"
 
-[node name="OceanBottlenoseConfigEditorContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean"]
+[node name="OceanBottlenoseConfigEditorContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean" unique_id=1260658610]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBottlenoseConfigEditorContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBottlenoseConfigEditorContainer" unique_id=1763950351]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBottlenoseConfigEditorContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBottlenoseConfigEditorContainer/VBoxContainer" unique_id=67810711]
 layout_mode = 2
 alignment = 2
 
-[node name="OceanAddBottlenoseDolphinBtn" type="Button" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBottlenoseConfigEditorContainer/VBoxContainer/HBoxContainer"]
+[node name="OceanAddBottlenoseDolphinBtn" type="Button" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBottlenoseConfigEditorContainer/VBoxContainer/HBoxContainer" unique_id=340170155]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Add Bottlenose Dolphin"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBottlenoseConfigEditorContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBottlenoseConfigEditorContainer/VBoxContainer" unique_id=1851748064]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBottlenoseConfigEditorContainer/VBoxContainer/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBottlenoseConfigEditorContainer/VBoxContainer/ScrollContainer" unique_id=125330742]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="OceanBottlenoseDolphinItemsContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBottlenoseConfigEditorContainer/VBoxContainer/ScrollContainer/MarginContainer"]
+[node name="OceanBottlenoseDolphinItemsContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBottlenoseConfigEditorContainer/VBoxContainer/ScrollContainer/MarginContainer" unique_id=1495166970]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 15
 
-[node name="OceanCommonConfigEditorContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean"]
+[node name="OceanCommonConfigEditorContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean" unique_id=777225814]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanCommonConfigEditorContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanCommonConfigEditorContainer" unique_id=2110610236]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanCommonConfigEditorContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanCommonConfigEditorContainer/VBoxContainer" unique_id=1744380322]
 layout_mode = 2
 alignment = 2
 
-[node name="OceanAddCommonDolphinBtn" type="Button" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanCommonConfigEditorContainer/VBoxContainer/HBoxContainer"]
+[node name="OceanAddCommonDolphinBtn" type="Button" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanCommonConfigEditorContainer/VBoxContainer/HBoxContainer" unique_id=766623403]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Add Common Dolphin"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanCommonConfigEditorContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanCommonConfigEditorContainer/VBoxContainer" unique_id=1026256869]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanCommonConfigEditorContainer/VBoxContainer/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanCommonConfigEditorContainer/VBoxContainer/ScrollContainer" unique_id=1097461322]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="OceanCommonDolphinItemsContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanCommonConfigEditorContainer/VBoxContainer/ScrollContainer/MarginContainer"]
+[node name="OceanCommonDolphinItemsContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanCommonConfigEditorContainer/VBoxContainer/ScrollContainer/MarginContainer" unique_id=1305408610]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 15
 
-[node name="OceanBoatsConfigEditorContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean"]
+[node name="OceanBoatsConfigEditorContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean" unique_id=63768812]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBoatsConfigEditorContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBoatsConfigEditorContainer" unique_id=189197062]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBoatsConfigEditorContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBoatsConfigEditorContainer/VBoxContainer" unique_id=585899878]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBoatsConfigEditorContainer/VBoxContainer/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBoatsConfigEditorContainer/VBoxContainer/ScrollContainer" unique_id=517751314]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -205,39 +205,16 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="OceanBoatsItemsContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBoatsConfigEditorContainer/VBoxContainer/ScrollContainer/MarginContainer"]
+[node name="OceanBoatsItemsContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBoatsConfigEditorContainer/VBoxContainer/ScrollContainer/MarginContainer" unique_id=32053466]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 15
 
-[node name="OceanInflatablePatrolBoatItem" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBoatsConfigEditorContainer/VBoxContainer/ScrollContainer/MarginContainer/OceanBoatsItemsContainer" instance=ExtResource("3_3n0ie")]
+[node name="OceanInflatablePatrolBoatItem" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanBoatsConfigEditorContainer/VBoxContainer/ScrollContainer/MarginContainer/OceanBoatsItemsContainer" unique_id=1227741455 instance=ExtResource("3_3n0ie")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="OceanWhalesConfigEditorContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean"]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.8
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 20
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanWhalesConfigEditorContainer"]
-layout_mode = 2
-theme_override_constants/separation = 12
-
-[node name="OceanHumpbackWhaleItem" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanWhalesConfigEditorContainer/VBoxContainer" instance=ExtResource("4_r2mo2")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="OceanBlueWhaleItem" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanWhalesConfigEditorContainer/VBoxContainer" instance=ExtResource("5_tnbi5")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="OceanGeneralConfigEditorContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean"]
+[node name="OceanWhalesConfigEditorContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean" unique_id=668375453]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -248,20 +225,43 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanWhalesConfigEditorContainer" unique_id=1105535198]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer/VBoxContainer"]
+[node name="OceanHumpbackWhaleItem" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanWhalesConfigEditorContainer/VBoxContainer" unique_id=366714792 instance=ExtResource("4_r2mo2")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="OceanBlueWhaleItem" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanWhalesConfigEditorContainer/VBoxContainer" unique_id=1212598518 instance=ExtResource("5_tnbi5")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="OceanGeneralConfigEditorContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean" unique_id=607391227]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.8
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer" unique_id=267054854]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer/VBoxContainer" unique_id=1949627020]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 8
 
-[node name="Label" type="Label" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer/VBoxContainer/HBoxContainer" unique_id=608026515]
 layout_mode = 2
 text = "Boat event delay:"
 
-[node name="OceanBoatEventDelayMinSpinBox" type="SpinBox" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer/VBoxContainer/HBoxContainer"]
+[node name="OceanBoatEventDelayMinSpinBox" type="SpinBox" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer/VBoxContainer/HBoxContainer" unique_id=999279367]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -271,7 +271,7 @@ step = 0.5
 value = 60.0
 suffix = "seconds (min)"
 
-[node name="OceanBoatEventDelayMaxSpinBox" type="SpinBox" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer/VBoxContainer/HBoxContainer"]
+[node name="OceanBoatEventDelayMaxSpinBox" type="SpinBox" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer/VBoxContainer/HBoxContainer" unique_id=1561552804]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -281,16 +281,16 @@ step = 0.5
 value = 70.0
 suffix = "seconds (max)"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer/VBoxContainer" unique_id=1273900244]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 8
 
-[node name="Label" type="Label" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer/VBoxContainer/HBoxContainer2" unique_id=1548085329]
 layout_mode = 2
 text = "Whale event delay:"
 
-[node name="OceanWhaleEventDelaySpinBox" type="SpinBox" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer/VBoxContainer/HBoxContainer2"]
+[node name="OceanWhaleEventDelaySpinBox" type="SpinBox" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer/VBoxContainer/HBoxContainer2" unique_id=60772351]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -300,16 +300,16 @@ step = 0.5
 value = 10.0
 suffix = "seconds"
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer/VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer/VBoxContainer" unique_id=193754456]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 8
 
-[node name="Label" type="Label" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer/VBoxContainer/HBoxContainer3"]
+[node name="Label" type="Label" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer/VBoxContainer/HBoxContainer3" unique_id=2101304268]
 layout_mode = 2
 text = "Boat loops:"
 
-[node name="OceanBoatLoopsSpinBox" type="SpinBox" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer/VBoxContainer/HBoxContainer3"]
+[node name="OceanBoatLoopsSpinBox" type="SpinBox" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Ocean/OceanGeneralConfigEditorContainer/VBoxContainer/HBoxContainer3" unique_id=1606756125]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -317,120 +317,120 @@ tooltip_text = "Number of loops that the boat will do before stopping in the wha
 max_value = 10.0
 value = 2.0
 
-[node name="Shore" type="HSplitContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer"]
+[node name="Shore" type="HSplitContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer" unique_id=1157549617]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
 metadata/_tab_index = 1
 
-[node name="ShoreTree" type="Tree" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore"]
+[node name="ShoreTree" type="Tree" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore" unique_id=817730975]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.2
 
-[node name="ShoreDefaultContainer" type="CenterContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore"]
+[node name="ShoreDefaultContainer" type="CenterContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore" unique_id=1166357542]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.8
 
-[node name="Label" type="Label" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreDefaultContainer"]
+[node name="Label" type="Label" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreDefaultContainer" unique_id=1921354694]
 layout_mode = 2
 text = "Select something!"
 
-[node name="ShoreBottlenoseConfigEditorContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore"]
+[node name="ShoreBottlenoseConfigEditorContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore" unique_id=1227488685]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBottlenoseConfigEditorContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBottlenoseConfigEditorContainer" unique_id=177996628]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBottlenoseConfigEditorContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBottlenoseConfigEditorContainer/VBoxContainer" unique_id=695949312]
 layout_mode = 2
 alignment = 2
 
-[node name="ShoreAddBottlenoseDolphinBtn" type="Button" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBottlenoseConfigEditorContainer/VBoxContainer/HBoxContainer"]
+[node name="ShoreAddBottlenoseDolphinBtn" type="Button" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBottlenoseConfigEditorContainer/VBoxContainer/HBoxContainer" unique_id=1208670729]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Add Bottlenose Dolphin"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBottlenoseConfigEditorContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBottlenoseConfigEditorContainer/VBoxContainer" unique_id=843880562]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBottlenoseConfigEditorContainer/VBoxContainer/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBottlenoseConfigEditorContainer/VBoxContainer/ScrollContainer" unique_id=351314150]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="ShoreBottlenoseDolphinItemsContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBottlenoseConfigEditorContainer/VBoxContainer/ScrollContainer/MarginContainer"]
+[node name="ShoreBottlenoseDolphinItemsContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBottlenoseConfigEditorContainer/VBoxContainer/ScrollContainer/MarginContainer" unique_id=2130582869]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 15
 
-[node name="ShoreCommonConfigEditorContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore"]
+[node name="ShoreCommonConfigEditorContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore" unique_id=1121450506]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreCommonConfigEditorContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreCommonConfigEditorContainer" unique_id=615885120]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreCommonConfigEditorContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreCommonConfigEditorContainer/VBoxContainer" unique_id=1360250739]
 layout_mode = 2
 alignment = 2
 
-[node name="ShoreAddCommonDolphinBtn" type="Button" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreCommonConfigEditorContainer/VBoxContainer/HBoxContainer"]
+[node name="ShoreAddCommonDolphinBtn" type="Button" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreCommonConfigEditorContainer/VBoxContainer/HBoxContainer" unique_id=37092887]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Add Common Dolphin"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreCommonConfigEditorContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreCommonConfigEditorContainer/VBoxContainer" unique_id=590505342]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreCommonConfigEditorContainer/VBoxContainer/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreCommonConfigEditorContainer/VBoxContainer/ScrollContainer" unique_id=218127963]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="ShoreCommonDolphinItemsContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreCommonConfigEditorContainer/VBoxContainer/ScrollContainer/MarginContainer"]
+[node name="ShoreCommonDolphinItemsContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreCommonConfigEditorContainer/VBoxContainer/ScrollContainer/MarginContainer" unique_id=264056208]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 15
 
-[node name="ShoreBoatsConfigEditorContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore"]
+[node name="ShoreBoatsConfigEditorContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore" unique_id=1316905053]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBoatsConfigEditorContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBoatsConfigEditorContainer" unique_id=1843737170]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBoatsConfigEditorContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBoatsConfigEditorContainer/VBoxContainer" unique_id=652307731]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBoatsConfigEditorContainer/VBoxContainer/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBoatsConfigEditorContainer/VBoxContainer/ScrollContainer" unique_id=458353577]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -439,39 +439,16 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="ShoreBoatsItemsContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBoatsConfigEditorContainer/VBoxContainer/ScrollContainer/MarginContainer"]
+[node name="ShoreBoatsItemsContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBoatsConfigEditorContainer/VBoxContainer/ScrollContainer/MarginContainer" unique_id=709595088]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 15
 
-[node name="ShoreInflatablePatrolBoatItem" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBoatsConfigEditorContainer/VBoxContainer/ScrollContainer/MarginContainer/ShoreBoatsItemsContainer" instance=ExtResource("3_3n0ie")]
+[node name="ShoreInflatablePatrolBoatItem" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreBoatsConfigEditorContainer/VBoxContainer/ScrollContainer/MarginContainer/ShoreBoatsItemsContainer" unique_id=353727223 instance=ExtResource("3_3n0ie")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="ShoreWhalesConfigEditorContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore"]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.8
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 20
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreWhalesConfigEditorContainer"]
-layout_mode = 2
-theme_override_constants/separation = 12
-
-[node name="ShoreHumpbackWhaleItem" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreWhalesConfigEditorContainer/VBoxContainer" instance=ExtResource("4_r2mo2")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="ShoreBlueWhaleItem" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreWhalesConfigEditorContainer/VBoxContainer" instance=ExtResource("5_tnbi5")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="ShoreGeneralConfigEditorContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore"]
+[node name="ShoreWhalesConfigEditorContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore" unique_id=979747148]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -482,20 +459,43 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreGeneralConfigEditorContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreWhalesConfigEditorContainer" unique_id=1584470860]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreGeneralConfigEditorContainer/VBoxContainer"]
+[node name="ShoreHumpbackWhaleItem" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreWhalesConfigEditorContainer/VBoxContainer" unique_id=1647233672 instance=ExtResource("4_r2mo2")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ShoreBlueWhaleItem" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreWhalesConfigEditorContainer/VBoxContainer" unique_id=1527860612 instance=ExtResource("5_tnbi5")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ShoreGeneralConfigEditorContainer" type="MarginContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore" unique_id=2020216922]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.8
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreGeneralConfigEditorContainer" unique_id=2048414949]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreGeneralConfigEditorContainer/VBoxContainer" unique_id=594784720]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 8
 
-[node name="Label" type="Label" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreGeneralConfigEditorContainer/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreGeneralConfigEditorContainer/VBoxContainer/HBoxContainer" unique_id=999798696]
 layout_mode = 2
 text = "Boat event delay:"
 
-[node name="ShoreBoatEventDelayMinSpinBox" type="SpinBox" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreGeneralConfigEditorContainer/VBoxContainer/HBoxContainer"]
+[node name="ShoreBoatEventDelayMinSpinBox" type="SpinBox" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreGeneralConfigEditorContainer/VBoxContainer/HBoxContainer" unique_id=915919958]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -505,7 +505,7 @@ step = 0.5
 value = 60.0
 suffix = "seconds (min)"
 
-[node name="ShoreBoatEventDelayMaxSpinBox" type="SpinBox" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreGeneralConfigEditorContainer/VBoxContainer/HBoxContainer"]
+[node name="ShoreBoatEventDelayMaxSpinBox" type="SpinBox" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreGeneralConfigEditorContainer/VBoxContainer/HBoxContainer" unique_id=612335532]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -515,16 +515,16 @@ step = 0.5
 value = 70.0
 suffix = "seconds (max)"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreGeneralConfigEditorContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreGeneralConfigEditorContainer/VBoxContainer" unique_id=35934462]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 8
 
-[node name="Label" type="Label" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreGeneralConfigEditorContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreGeneralConfigEditorContainer/VBoxContainer/HBoxContainer2" unique_id=1212556322]
 layout_mode = 2
 text = "Dolphins curiosity duration"
 
-[node name="ShoreMinDolphinCuriosityDurationSpinBox" type="SpinBox" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreGeneralConfigEditorContainer/VBoxContainer/HBoxContainer2"]
+[node name="ShoreMinDolphinCuriosityDurationSpinBox" type="SpinBox" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreGeneralConfigEditorContainer/VBoxContainer/HBoxContainer2" unique_id=10709414]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -534,7 +534,7 @@ step = 0.5
 value = 20.0
 suffix = "seconds (min)"
 
-[node name="ShoreMaxDolphinCuriosityDurationSpinBox" type="SpinBox" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreGeneralConfigEditorContainer/VBoxContainer/HBoxContainer2"]
+[node name="ShoreMaxDolphinCuriosityDurationSpinBox" type="SpinBox" parent="MainContainer/VBoxContainer/VBoxContainer/TabContainer/Shore/ShoreGeneralConfigEditorContainer/VBoxContainer/HBoxContainer2" unique_id=1842910954]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -544,7 +544,7 @@ step = 0.5
 value = 25.0
 suffix = "seconds (max)"
 
-[node name="SyncConfirmDialog" type="ConfirmationDialog" parent="."]
+[node name="SyncConfirmDialog" type="ConfirmationDialog" parent="." unique_id=96499740]
 unique_name_in_owner = true
 initial_position = 2
 size = Vector2i(500, 200)

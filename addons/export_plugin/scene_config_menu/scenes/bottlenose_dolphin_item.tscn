@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpjkagi2k4we5"]
+[gd_scene format=3 uid="uid://cpjkagi2k4we5"]
 
 [ext_resource type="Script" uid="uid://cm5uj0n72jtwd" path="res://addons/export_plugin/scene_config_menu/scenes/bottlenose_dolphin_item.gd" id="1_ulseo"]
 [ext_resource type="Theme" uid="uid://c7osqhiu57ov4" path="res://addons/export_plugin/scene_config_menu/themes/buttons_theme.tres" id="2_ihah1"]
@@ -6,32 +6,32 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lj4ik"]
 bg_color = Color(0.188235, 0.215686, 0.262745, 1)
 
-[node name="BottlenoseDolphinItem" type="PanelContainer"]
+[node name="BottlenoseDolphinItem" type="PanelContainer" unique_id=431135027]
 theme_override_styles/panel = SubResource("StyleBoxFlat_lj4ik")
 script = ExtResource("1_ulseo")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=253482319]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1695079597]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="ToggleButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="ToggleButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=2102181165]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Bottlenose Dolphin"
 alignment = 0
 
-[node name="DeleteButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="DeleteButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=256426740]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_ihah1")
 theme_type_variation = &"RedButton"
 text = "Delete"
 
-[node name="ContentContainer" type="MarginContainer" parent="VBoxContainer"]
+[node name="ContentContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1513889307]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -40,23 +40,23 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ContentContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ContentContainer" unique_id=1687285344]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ContentContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ContentContainer/VBoxContainer" unique_id=1354214227]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer" unique_id=2048602929]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 8
 
-[node name="Label" type="Label" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=96423062]
 layout_mode = 2
 text = "Height:"
 
-[node name="HeightMinSpinBox" type="SpinBox" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
+[node name="HeightMinSpinBox" type="SpinBox" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=397507834]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -67,7 +67,7 @@ step = 0.1
 value = 0.5
 suffix = "meters (min)"
 
-[node name="HeightMaxSpinBox" type="SpinBox" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
+[node name="HeightMaxSpinBox" type="SpinBox" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=1689879626]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -78,15 +78,15 @@ step = 0.1
 value = 3.0
 suffix = "meters (max)"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/ContentContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/ContentContainer/VBoxContainer" unique_id=546147729]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="Label" type="Label" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer2" unique_id=1551723859]
 layout_mode = 2
 text = "Swim speed:"
 
-[node name="SwimSpeedSpinBox" type="SpinBox" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer2"]
+[node name="SwimSpeedSpinBox" type="SpinBox" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer2" unique_id=352767074]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -97,15 +97,15 @@ step = 0.1
 value = 8.0
 suffix = "km/h"
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/ContentContainer/VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/ContentContainer/VBoxContainer" unique_id=2039169787]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="Label" type="Label" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer3"]
+[node name="Label" type="Label" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer3" unique_id=437720873]
 layout_mode = 2
 text = "Distance to player:"
 
-[node name="MinDistanceToPlayerSpinBox" type="SpinBox" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer3"]
+[node name="MinDistanceToPlayerSpinBox" type="SpinBox" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer3" unique_id=2015149075]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -116,7 +116,7 @@ step = 0.1
 value = 4.0
 suffix = "(min)"
 
-[node name="MaxDistanceToPlayerSpinBox" type="SpinBox" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer3"]
+[node name="MaxDistanceToPlayerSpinBox" type="SpinBox" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer3" unique_id=2048896071]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -127,21 +127,21 @@ step = 0.1
 value = 8.0
 suffix = "(max)"
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer/ContentContainer/VBoxContainer"]
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer/ContentContainer/VBoxContainer" unique_id=1240841380]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer5"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer5" unique_id=1982018559]
 layout_mode = 2
 tooltip_text = "The initial spawn direction of the entity. For example, a spawn direction of x: 0 and z: -1 will spawn the dolphin right in front of the player.
 Leave as x: 0 and z: 0 to choose a random spawn direction."
 theme_override_constants/separation = 8
 
-[node name="Label" type="Label" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer5/HBoxContainer2"]
+[node name="Label" type="Label" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer5/HBoxContainer2" unique_id=1402334733]
 layout_mode = 2
 text = "Spawn direction:"
 
-[node name="SpawnDirX" type="SpinBox" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer5/HBoxContainer2"]
+[node name="SpawnDirX" type="SpinBox" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer5/HBoxContainer2" unique_id=694328876]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -150,7 +150,7 @@ max_value = 1.0
 step = 0.1
 prefix = "x |"
 
-[node name="SpawnDirZ" type="SpinBox" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer5/HBoxContainer2"]
+[node name="SpawnDirZ" type="SpinBox" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer5/HBoxContainer2" unique_id=1823536708]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -159,27 +159,27 @@ max_value = 1.0
 step = 0.1
 prefix = "z |"
 
-[node name="SwimClockwiseToggle" type="CheckButton" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer5"]
+[node name="SwimClockwiseToggle" type="CheckButton" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer5" unique_id=927165305]
 unique_name_in_owner = true
 layout_mode = 2
 tooltip_text = "Controls if the entity will swim clockwise or counter-clockwise. Default: true"
 button_pressed = true
 text = "Swim clockwise: "
 
-[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer/ContentContainer/VBoxContainer"]
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer/ContentContainer/VBoxContainer" unique_id=2122562775]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer6"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer6" unique_id=1475269904]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 8
 
-[node name="Label" type="Label" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer6/HBoxContainer2"]
+[node name="Label" type="Label" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer6/HBoxContainer2" unique_id=143513467]
 layout_mode = 2
 text = "Breathing cooldown:"
 
-[node name="BreathingCooldownSpinBox" type="SpinBox" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer6/HBoxContainer2"]
+[node name="BreathingCooldownSpinBox" type="SpinBox" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer6/HBoxContainer2" unique_id=479205245]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -189,13 +189,13 @@ step = 0.5
 value = 30.0
 suffix = "seconds."
 
-[node name="YoungToggle" type="CheckButton" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer6"]
+[node name="YoungToggle" type="CheckButton" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer6" unique_id=748414307]
 unique_name_in_owner = true
 layout_mode = 2
 tooltip_text = "Controls if the entity is young, which will scale the model down to 75% of the scale of an adult. Default: false"
 text = "Is young: "
 
-[node name="MotherToggle" type="CheckButton" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer6"]
+[node name="MotherToggle" type="CheckButton" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer6" unique_id=1799033354]
 unique_name_in_owner = true
 layout_mode = 2
 tooltip_text = "Controls if the entity is a mother, which will add a calf that swims along if enabled. Default: false"

@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://bf2grlmtfsc76"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bf2grlmtfsc76"]
 
 [ext_resource type="Material" uid="uid://cn7dx1ulrlcft" path="res://scenes/3d/shared/materials/underwater_caustics_material.tres" id="1_wbftl"]
 [ext_resource type="Texture2D" uid="uid://cgnjf6bshpro" path="res://scenes/3d/animals/whales/humpback/textures/Humpbackwhale_diff.png" id="2_eqlnd"]

@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bsi4hp2wc7giv"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bsi4hp2wc7giv"]
 
 [ext_resource type="Shader" uid="uid://0o2cl5bkcqvn" path="res://scenes/3d/animals/fish/v2/materials/fish_shader.gdshader" id="1_lf2fs"]
 [ext_resource type="Texture2D" uid="uid://d2vnfbfmtplvt" path="res://scenes/3d/animals/fish/v2/textures/sardine_albedo_512.png" id="2_r2yj1"]

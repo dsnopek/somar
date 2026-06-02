@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccsw0ib80y7r2"]
+[gd_scene format=3 uid="uid://ccsw0ib80y7r2"]
 
 [ext_resource type="Material" uid="uid://b5qf4j7fccqec" path="res://scenes/3d/boats/trail/materials/foam_material.tres" id="2_nglia"]
 [ext_resource type="Script" uid="uid://cs1ng2v32oocu" path="res://scenes/3d/effects/water_break_effect.gd" id="3_ulrhq"]
@@ -13,10 +13,10 @@ interpolation_color_space = 2
 offsets = PackedFloat32Array(0, 0.0551724, 1)
 colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1)
 
-[node name="WaterBreakEffect" type="Node3D"]
+[node name="WaterBreakEffect" type="Node3D" unique_id=575432333]
 script = ExtResource("3_ulrhq")
 
-[node name="BubblesParticles" type="CPUParticles3D" parent="."]
+[node name="BubblesParticles" type="CPUParticles3D" parent="." unique_id=1914842323]
 unique_name_in_owner = true
 extra_cull_margin = 200.0
 emitting = false

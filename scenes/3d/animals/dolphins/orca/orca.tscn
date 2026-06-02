@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cklg8u74xgmet"]
+[gd_scene format=3 uid="uid://cklg8u74xgmet"]
 
 [ext_resource type="ArrayMesh" uid="uid://dwf3km8nwfe50" path="res://scenes/3d/animals/dolphins/orca/mesh/killerwhaleBF_body.res" id="1_2wq1q"]
 [ext_resource type="Script" uid="uid://beanyo8ulresu" path="res://scenes/3d/animals/dolphins/orca/orca.gd" id="1_j4rgb"]
@@ -265,16 +265,16 @@ _data = {
 &"dolphin|twist_A2": ExtResource("23_gat5a")
 }
 
-[node name="Orca" type="Node3D"]
+[node name="Orca" type="Node3D" unique_id=1442873212]
 script = ExtResource("1_j4rgb")
 
-[node name="killer_whale_AF" type="Node3D" parent="."]
+[node name="killer_whale_AF" type="Node3D" parent="." unique_id=139469832]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
-[node name="dolphin" type="Node3D" parent="killer_whale_AF"]
+[node name="dolphin" type="Node3D" parent="killer_whale_AF" unique_id=572094354]
 transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
 
-[node name="Skeleton3D" type="Skeleton3D" parent="killer_whale_AF/dolphin"]
+[node name="Skeleton3D" type="Skeleton3D" parent="killer_whale_AF/dolphin" unique_id=1877353476]
 bones/0/name = "Root"
 bones/0/parent = -1
 bones/0/rest = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
@@ -990,17 +990,16 @@ bones/101/position = Vector3(0, 0.0048479, 0)
 bones/101/rotation = Quaternion(0, 0, 0, 1)
 bones/101/scale = Vector3(1, 1, 1)
 
-[node name="killerwhaleBF_body" type="MeshInstance3D" parent="killer_whale_AF/dolphin/Skeleton3D"]
+[node name="killerwhaleBF_body" type="MeshInstance3D" parent="killer_whale_AF/dolphin/Skeleton3D" unique_id=128818817]
 mesh = ExtResource("1_2wq1q")
 skin = SubResource("Skin_euvho")
+skeleton = NodePath("..")
 surface_material_override/0 = ExtResource("2_wk4og")
 surface_material_override/1 = ExtResource("2_wk4og")
 script = ExtResource("4_jlwkf")
 low_quality_materials = Array[Material]([ExtResource("2_wk4og"), ExtResource("2_wk4og")])
 high_quality_materials = Array[Material]([ExtResource("4_q48ul"), ExtResource("4_q48ul")])
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="killer_whale_AF"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="killer_whale_AF" unique_id=610975614]
 unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_lf8jf")
-}
+libraries/ = SubResource("AnimationLibrary_lf8jf")

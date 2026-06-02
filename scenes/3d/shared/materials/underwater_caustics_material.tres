@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cn7dx1ulrlcft"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cn7dx1ulrlcft"]
 
 [ext_resource type="Shader" uid="uid://bvic8xfyvyb1v" path="res://scenes/3d/shared/materials/water_caustics_shader.gdshader" id="1_5lj6f"]
 [ext_resource type="Texture2D" uid="uid://ccie77ae80fo2" path="res://scenes/3d/shared/textures/water_caustics_noise_joined.png" id="2_504s7"]

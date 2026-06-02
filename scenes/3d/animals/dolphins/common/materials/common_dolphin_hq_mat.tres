@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://uaf1ps1d6e64"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://uaf1ps1d6e64"]
 
 [ext_resource type="Material" uid="uid://cn7dx1ulrlcft" path="res://scenes/3d/shared/materials/underwater_caustics_material.tres" id="1_b5ib0"]
 [ext_resource type="Shader" uid="uid://cwrv6gebmho45" path="res://scenes/3d/shared/materials/base_shader_col_nrm_rough_metal.gdshader" id="1_qtaig"]

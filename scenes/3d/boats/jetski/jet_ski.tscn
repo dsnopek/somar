@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bfofa0fijqdni"]
+[gd_scene format=3 uid="uid://bfofa0fijqdni"]
 
 [ext_resource type="Shader" uid="uid://bufpt1ntjbbl4" path="res://scenes/3d/boats/inflatable_patrol/materials/boat_color_w_height_shader.tres" id="1_jpjfy"]
 [ext_resource type="ArrayMesh" uid="uid://cy2xjgvv5cv1c" path="res://scenes/3d/boats/jetski/mesh/jet_ski_Jet_Ski.res" id="1_s6wo2"]
@@ -86,7 +86,7 @@ interpolation_color_space = 2
 offsets = PackedFloat32Array(0, 0.0551724, 1)
 colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1)
 
-[node name="JetSki" type="Node3D" node_paths=PackedStringArray("dolphin_curious_positions_parent", "bubbles_particles", "foam_plane_material_parent", "hull_bottom_material_parent")]
+[node name="JetSki" type="Node3D" unique_id=772888103 node_paths=PackedStringArray("dolphin_curious_positions_parent", "bubbles_particles", "foam_plane_material_parent", "hull_bottom_material_parent")]
 script = ExtResource("1_u1vak")
 speed = 34.0
 surface_offset = -0.282
@@ -101,38 +101,34 @@ engine_stop_audio = ExtResource("5_0vbbo")
 engine_idle_audio = ExtResource("6_64tc6")
 engine_start_audio = ExtResource("7_uq88s")
 
-[node name="MovementPivot" type="Node3D" parent="."]
-transform = Transform3D(0.9999358, 0.011189035, -2.1223534e-05, -0.011188973, 0.9999373, 0.0012714147, 3.544805e-05, -0.0012710994, 0.9999984, 0, -0.031109951, 0)
+[node name="MovementPivot" type="Node3D" parent="." unique_id=1706736933]
+transform = Transform3D(0.9999955, -0.0023965174, -1.3258731e-05, 0.0023965333, 0.9999959, 0.0019686054, 8.540867e-06, -0.0019686345, 0.9999972, 0, -0.0069145653, 0)
 
-[node name="jet_ski" type="Node3D" parent="MovementPivot"]
+[node name="jet_ski" type="Node3D" parent="MovementPivot" unique_id=785791523]
 transform = Transform3D(-3.49691e-09, 0, 0.08, 0, 0.08, 0, -0.08, 0, -3.49691e-09, 0, 0.154004, 0)
 
-[node name="Jet_Ski" type="MeshInstance3D" parent="MovementPivot/jet_ski"]
+[node name="Jet_Ski" type="MeshInstance3D" parent="MovementPivot/jet_ski" unique_id=1403832389]
 transform = Transform3D(1, 0, 0, 0, -3.57628e-07, -1, 0, 1, -3.57628e-07, 0, 0, 0)
 material_override = SubResource("ShaderMaterial_7h2m6")
 mesh = ExtResource("1_s6wo2")
-skeleton = NodePath("")
 
-[node name="bottom" type="MeshInstance3D" parent="MovementPivot/jet_ski"]
+[node name="bottom" type="MeshInstance3D" parent="MovementPivot/jet_ski" unique_id=1521692025]
 transform = Transform3D(1, 0, 0, 0, -4.80825e-08, -1.1, 0, 1.1, -4.80825e-08, 0.0862863, -0.000173092, 3.7717e-09)
 material_override = ExtResource("2_udrpi")
 mesh = ExtResource("2_sokn1")
-skeleton = NodePath("")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"speedboat": SubResource("AnimationLibrary_bxgh5")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=161164997]
+libraries/speedboat = SubResource("AnimationLibrary_bxgh5")
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1337739788]
 tree_root = SubResource("AnimationNodeBlendTree_w5qmq")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
 
-[node name="BoatTrail" type="Node3D" parent="."]
+[node name="BoatTrail" type="Node3D" parent="." unique_id=1651674409]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.384, -3.76767)
 
-[node name="BubblesParticles" type="CPUParticles3D" parent="BoatTrail"]
+[node name="BubblesParticles" type="CPUParticles3D" parent="BoatTrail" unique_id=2032470901]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.92629, -0.30984, -1.30666e-07)
 extra_cull_margin = 200.0
 amount = 50
@@ -152,39 +148,38 @@ scale_amount_max = 1.5
 scale_amount_curve = SubResource("Curve_rvdav")
 color_ramp = SubResource("Gradient_ct52t")
 
-[node name="FoamPlane" type="MeshInstance3D" parent="BoatTrail"]
+[node name="FoamPlane" type="MeshInstance3D" parent="BoatTrail" unique_id=2011635811]
 transform = Transform3D(-1.94516e-08, 0, -0.455, 0, 1, 0, 0.445, 0, -1.98887e-08, 2.062, -0.646, 0)
 material_override = ExtResource("6_q53xe")
 mesh = ExtResource("7_h38w5")
-skeleton = NodePath("")
 
-[node name="DolphinCuriousPositions" type="Node3D" parent="."]
+[node name="DolphinCuriousPositions" type="Node3D" parent="." unique_id=1125504173]
 
-[node name="Pos0" type="Marker3D" parent="DolphinCuriousPositions"]
+[node name="Pos0" type="Marker3D" parent="DolphinCuriousPositions" unique_id=933247628]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.13018, 0.711619, 0)
 metadata/in_use = false
 
-[node name="Pos1" type="Marker3D" parent="DolphinCuriousPositions"]
+[node name="Pos1" type="Marker3D" parent="DolphinCuriousPositions" unique_id=291657515]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.87163, 0.711619, -5.04452)
 metadata/in_use = false
 
-[node name="Pos2" type="Marker3D" parent="DolphinCuriousPositions"]
+[node name="Pos2" type="Marker3D" parent="DolphinCuriousPositions" unique_id=1817118018]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.04585, 0.711619, 4.69606)
 metadata/in_use = false
 
-[node name="Pos3" type="Marker3D" parent="DolphinCuriousPositions"]
+[node name="Pos3" type="Marker3D" parent="DolphinCuriousPositions" unique_id=1097379024]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 4.97433, 0.711619, 3.23705e-07)
 metadata/in_use = false
 
-[node name="Pos4" type="Marker3D" parent="DolphinCuriousPositions"]
+[node name="Pos4" type="Marker3D" parent="DolphinCuriousPositions" unique_id=188884863]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 5.24979, 0.711797, 4.9893)
 metadata/in_use = false
 
-[node name="Pos5" type="Marker3D" parent="DolphinCuriousPositions"]
+[node name="Pos5" type="Marker3D" parent="DolphinCuriousPositions" unique_id=670000361]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 4.72584, 0.711797, -4.9896)
 metadata/in_use = false
 
-[node name="EngineLoopAudioPlayer" type="AudioStreamPlayer3D" parent="."]
+[node name="EngineLoopAudioPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1410586378]
 unique_name_in_owner = true
 stream = ExtResource("16_3mjrr")
 volume_db = 10.0
@@ -194,7 +189,7 @@ autoplay = true
 max_distance = 110.0
 bus = &"Boats"
 
-[node name="EngineStartStopAudioPlayer" type="AudioStreamPlayer3D" parent="."]
+[node name="EngineStartStopAudioPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1386781266]
 unique_name_in_owner = true
 volume_db = 3.0
 unit_size = 15.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://p0yx1ovcqwpd"]
+[gd_scene format=3 uid="uid://p0yx1ovcqwpd"]
 
 [ext_resource type="Shader" uid="uid://iww82arrdi6t" path="res://scenes/3d/main_menu/materials/main_menu_long_press_btn_shader.gdshader" id="1_kdp3t"]
 [ext_resource type="Script" uid="uid://b3ekuaycvco88" path="res://utilities/CustomBtn.gd" id="1_mi14x"]
@@ -44,23 +44,23 @@ shader_parameter/corner_radius = 0.3
 [sub_resource type="BoxShape3D" id="BoxShape3D_87k1w"]
 size = Vector3(3.5, 2, 0.015)
 
-[node name="MainMenu" type="Node3D" node_paths=PackedStringArray("player_position") groups=["change_with_input"]]
+[node name="MainMenu" type="Node3D" unique_id=711148867 node_paths=PackedStringArray("player_position") groups=["change_with_input"]]
 script = ExtResource("1_ybh1f")
 player_position = NodePath("PlayerPosition")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=35086336]
 environment = SubResource("Environment_2u6yr")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1754611014]
 transform = Transform3D(1, 0, 0, 0, -0.173648, 0.984808, 0, -0.984808, -0.173648, 0, 17.7126, 0)
 
-[node name="LanguageButtons" type="Node3D" parent="."]
+[node name="LanguageButtons" type="Node3D" parent="." unique_id=1069175465]
 unique_name_in_owner = true
 process_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, -2.5)
 visible = false
 
-[node name="LanguageLbl" type="Label3D" parent="LanguageButtons"]
+[node name="LanguageLbl" type="Label3D" parent="LanguageButtons" unique_id=955652359]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.533896, 0.00219977)
 pixel_size = 0.001
 double_sided = false
@@ -72,7 +72,7 @@ text = "Language / linguagem:"
 font_size = 128
 outline_size = 8
 
-[node name="EnglishBtn" type="Area3D" parent="LanguageButtons"]
+[node name="EnglishBtn" type="Area3D" parent="LanguageButtons" unique_id=1812777347]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0, 0)
 collision_layer = 4
@@ -80,13 +80,13 @@ collision_mask = 0
 monitoring = false
 script = ExtResource("1_mi14x")
 
-[node name="BtnBackground" type="MeshInstance3D" parent="LanguageButtons/EnglishBtn"]
+[node name="BtnBackground" type="MeshInstance3D" parent="LanguageButtons/EnglishBtn" unique_id=955561720]
 sorting_offset = 1.0
 material_override = SubResource("ShaderMaterial_vk5ku")
 mesh = SubResource("QuadMesh_xmunv")
 skeleton = NodePath("../../..")
 
-[node name="BtnLabel" type="Label3D" parent="LanguageButtons/EnglishBtn"]
+[node name="BtnLabel" type="Label3D" parent="LanguageButtons/EnglishBtn" unique_id=1654673976]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00219971)
 pixel_size = 0.001
 double_sided = false
@@ -98,10 +98,10 @@ text = "English"
 font_size = 128
 outline_size = 8
 
-[node name="BtnCollisionShape" type="CollisionShape3D" parent="LanguageButtons/EnglishBtn"]
+[node name="BtnCollisionShape" type="CollisionShape3D" parent="LanguageButtons/EnglishBtn" unique_id=1545226459]
 shape = SubResource("BoxShape3D_jnp15")
 
-[node name="PortugueseBtn" type="Area3D" parent="LanguageButtons"]
+[node name="PortugueseBtn" type="Area3D" parent="LanguageButtons" unique_id=1111289103]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0, 0)
 collision_layer = 4
@@ -109,13 +109,13 @@ collision_mask = 0
 monitoring = false
 script = ExtResource("1_mi14x")
 
-[node name="BtnBackground" type="MeshInstance3D" parent="LanguageButtons/PortugueseBtn"]
+[node name="BtnBackground" type="MeshInstance3D" parent="LanguageButtons/PortugueseBtn" unique_id=1706776105]
 sorting_offset = 1.0
 material_override = SubResource("ShaderMaterial_q1m6m")
 mesh = SubResource("QuadMesh_xmunv")
 skeleton = NodePath("../../..")
 
-[node name="BtnLabel" type="Label3D" parent="LanguageButtons/PortugueseBtn"]
+[node name="BtnLabel" type="Label3D" parent="LanguageButtons/PortugueseBtn" unique_id=140426743]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00219971)
 pixel_size = 0.001
 double_sided = false
@@ -127,19 +127,19 @@ text = "Português"
 font_size = 128
 outline_size = 8
 
-[node name="BtnCollisionShape" type="CollisionShape3D" parent="LanguageButtons/PortugueseBtn"]
+[node name="BtnCollisionShape" type="CollisionShape3D" parent="LanguageButtons/PortugueseBtn" unique_id=1555903788]
 shape = SubResource("BoxShape3D_jnp15")
 
-[node name="BGArea" type="Area3D" parent="LanguageButtons"]
+[node name="BGArea" type="Area3D" parent="LanguageButtons" unique_id=1853275214]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
 collision_layer = 4
 collision_mask = 0
 monitoring = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LanguageButtons/BGArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LanguageButtons/BGArea" unique_id=45082720]
 shape = SubResource("BoxShape3D_87k1w")
 
-[node name="PressInstructionsLbl" type="Label3D" parent="LanguageButtons"]
+[node name="PressInstructionsLbl" type="Label3D" parent="LanguageButtons" unique_id=918483805]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.517525, 0.00219977)
 pixel_size = 0.001
@@ -153,4 +153,4 @@ Olhe para um botão para pressionar"
 font_size = 72
 outline_size = 4
 
-[node name="PlayerPosition" type="Marker3D" parent="."]
+[node name="PlayerPosition" type="Marker3D" parent="." unique_id=1714495857]

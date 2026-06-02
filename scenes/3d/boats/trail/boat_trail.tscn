@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://doxeemv7fo5re"]
+[gd_scene format=3 uid="uid://doxeemv7fo5re"]
 
 [ext_resource type="Shader" uid="uid://djeywh2qwrwre" path="res://scenes/3d/boats/trail/materials/boat_trail_shader.gdshader" id="1_uh5k5"]
 [ext_resource type="Texture2D" uid="uid://caitsuvwv15l4" path="res://scenes/3d/boats/trail/textures/boat_main_trail.png" id="2_brry3"]
@@ -49,9 +49,9 @@ shader_parameter/opacity = 0.75
 material = SubResource("ShaderMaterial_gfdf3")
 orientation = 1
 
-[node name="BoatTrail" type="Node3D"]
+[node name="BoatTrail" type="Node3D" unique_id=460850209]
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=356574256]
 amount = 16
 lifetime = 5.0
 process_material = SubResource("ParticleProcessMaterial_xi6st")

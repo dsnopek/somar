@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bqhhywt0sjd07"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bqhhywt0sjd07"]
 
 [ext_resource type="Shader" uid="uid://dshomwrpmn1r2" path="res://scenes/3d/main_menu/materials/pointer_shader.tres" id="1_mfiwa"]
 [ext_resource type="Texture2D" uid="uid://bx855ryq3ehp3" path="res://scenes/3d/main_menu/textures/pointer.png" id="2_70gf7"]

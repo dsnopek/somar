@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://c6boq0tgrmmw4"]
+[gd_scene format=3 uid="uid://c6boq0tgrmmw4"]
 
 [ext_resource type="Script" uid="uid://upsa4lm4ecna" path="res://scenes/3d/xr_player/xr_player.gd" id="1_wh4gs"]
 [ext_resource type="Material" uid="uid://bqhhywt0sjd07" path="res://scenes/3d/main_menu/materials/pointer_material.tres" id="2_bxq6t"]
@@ -93,43 +93,41 @@ shading_mode = 0
 albedo_texture = ExtResource("15_ml8d4")
 billboard_mode = 1
 
-[node name="XrPlayer" type="XROrigin3D"]
+[node name="XrPlayer" type="XROrigin3D" unique_id=851810807]
 script = ExtResource("1_wh4gs")
 
-[node name="XRCamera3D" type="XRCamera3D" parent="."]
+[node name="XRCamera3D" type="XRCamera3D" parent="." unique_id=1060775102]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
 
-[node name="ShaderCacheContainer" type="Node3D" parent="XRCamera3D"]
+[node name="ShaderCacheContainer" type="Node3D" parent="XRCamera3D" unique_id=1782399854]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.48841)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="XRCamera3D/ShaderCacheContainer"]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="XRCamera3D/ShaderCacheContainer" unique_id=590956853]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.91402)
 
-[node name="ShaderCache" parent="XRCamera3D/ShaderCacheContainer" instance=ExtResource("4_d5jj2")]
+[node name="ShaderCache" parent="XRCamera3D/ShaderCacheContainer" unique_id=1649838921 instance=ExtResource("4_d5jj2")]
 unique_name_in_owner = true
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
 
-[node name="ParticlesShaderCache" parent="XRCamera3D/ShaderCacheContainer" instance=ExtResource("6_u7mu1")]
+[node name="ParticlesShaderCache" parent="XRCamera3D/ShaderCacheContainer" unique_id=215447587 instance=ExtResource("6_u7mu1")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
 
-[node name="Splashscreen" type="Node3D" parent="XRCamera3D"]
+[node name="Splashscreen" type="Node3D" parent="XRCamera3D" unique_id=116122024]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.471853, -3)
 
-[node name="SplashScreenLogos" type="MeshInstance3D" parent="XRCamera3D/Splashscreen"]
+[node name="SplashScreenLogos" type="MeshInstance3D" parent="XRCamera3D/Splashscreen" unique_id=1468859137]
 material_override = SubResource("ShaderMaterial_v6qvq")
 mesh = SubResource("QuadMesh_oyqt1")
 
-[node name="LogoAnimationPlayer" type="AnimationPlayer" parent="XRCamera3D/Splashscreen"]
+[node name="LogoAnimationPlayer" type="AnimationPlayer" parent="XRCamera3D/Splashscreen" unique_id=1997617460]
 unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_1h4pu")
-}
+libraries/ = SubResource("AnimationLibrary_1h4pu")
 
-[node name="PointerRayCast" type="RayCast3D" parent="XRCamera3D"]
+[node name="PointerRayCast" type="RayCast3D" parent="XRCamera3D" unique_id=812625997]
 unique_name_in_owner = true
 enabled = false
 target_position = Vector3(0, 0, -15)
@@ -138,7 +136,7 @@ hit_back_faces = false
 collide_with_areas = true
 collide_with_bodies = false
 
-[node name="PointerMesh" type="MeshInstance3D" parent="XRCamera3D"]
+[node name="PointerMesh" type="MeshInstance3D" parent="XRCamera3D" unique_id=989745714]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 visible = false
@@ -146,25 +144,25 @@ sorting_offset = 10.0
 material_override = ExtResource("2_bxq6t")
 mesh = SubResource("QuadMesh_anvmr")
 
-[node name="RayPivot" type="Node3D" parent="XRCamera3D/PointerMesh"]
+[node name="RayPivot" type="Node3D" parent="XRCamera3D/PointerMesh" unique_id=978356580]
 unique_name_in_owner = true
 visible = false
 
-[node name="RayMesh" type="MeshInstance3D" parent="XRCamera3D/PointerMesh/RayPivot"]
+[node name="RayMesh" type="MeshInstance3D" parent="XRCamera3D/PointerMesh/RayPivot" unique_id=1955894299]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0.6)
 material_override = ExtResource("7_w3nnu")
 mesh = SubResource("CylinderMesh_nf3in")
 skeleton = NodePath("../../../../LeftController/ControllerRayCast")
 
-[node name="VignetteMesh" type="MeshInstance3D" parent="XRCamera3D"]
+[node name="VignetteMesh" type="MeshInstance3D" parent="XRCamera3D" unique_id=301309983]
 unique_name_in_owner = true
 visible = false
 sorting_offset = 3.0
 material_override = ExtResource("7_lhpba")
 mesh = SubResource("QuadMesh_6cwgg")
 
-[node name="ReturnToMMBtnLbl" type="Label3D" parent="XRCamera3D"]
+[node name="ReturnToMMBtnLbl" type="Label3D" parent="XRCamera3D" unique_id=1858483247]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.714, -2.75)
 visible = false
@@ -178,7 +176,7 @@ text = "XR_PLAYER_MENU_BTN_PRESS"
 font_size = 87
 outline_size = 4
 
-[node name="SunRays" type="MeshInstance3D" parent="XRCamera3D"]
+[node name="SunRays" type="MeshInstance3D" parent="XRCamera3D" unique_id=1411889297]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3, 0)
 top_level = true
@@ -187,18 +185,18 @@ material_override = ExtResource("11_bfnmn")
 mesh = SubResource("CylinderMesh_3y5pf")
 skeleton = NodePath("../..")
 
-[node name="AmbientAudioPlayer" type="AudioStreamPlayer" parent="XRCamera3D"]
+[node name="AmbientAudioPlayer" type="AudioStreamPlayer" parent="XRCamera3D" unique_id=1987759732]
 stream = ExtResource("10_fuxwj")
 volume_db = 1.5
 autoplay = true
 bus = &"Background"
 
-[node name="SubmergeAudioPlayer" type="AudioStreamPlayer" parent="XRCamera3D"]
+[node name="SubmergeAudioPlayer" type="AudioStreamPlayer" parent="XRCamera3D" unique_id=695694380]
 unique_name_in_owner = true
 stream = ExtResource("12_hucca")
 bus = &"SFX"
 
-[node name="LeftController" type="XRController3D" parent="."]
+[node name="LeftController" type="XRController3D" parent="." unique_id=544049028]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0)
 visible = false
@@ -206,11 +204,11 @@ tracker = &"left_hand"
 pose = &"aim"
 show_when_tracked = true
 
-[node name="LGlove" parent="LeftController" instance=ExtResource("8_h8gw4")]
+[node name="LGlove" parent="LeftController" unique_id=1312848701 instance=ExtResource("8_h8gw4")]
 unique_name_in_owner = true
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.003, -0.029, 0.054)
 
-[node name="ControllerRayCast" type="RayCast3D" parent="LeftController"]
+[node name="ControllerRayCast" type="RayCast3D" parent="LeftController" unique_id=443248759]
 unique_name_in_owner = true
 enabled = false
 target_position = Vector3(0, 0, -15)
@@ -219,7 +217,7 @@ hit_back_faces = false
 collide_with_areas = true
 collide_with_bodies = false
 
-[node name="RightController" type="XRController3D" parent="."]
+[node name="RightController" type="XRController3D" parent="." unique_id=987668208]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
 visible = false
@@ -227,33 +225,33 @@ tracker = &"right_hand"
 pose = &"aim"
 show_when_tracked = true
 
-[node name="RGlove" parent="RightController" instance=ExtResource("8_h8gw4")]
+[node name="RGlove" parent="RightController" unique_id=501453143 instance=ExtResource("8_h8gw4")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.003, -0.029, 0.054)
 
-[node name="LeftHand" type="XRNode3D" parent="."]
+[node name="LeftHand" type="XRNode3D" parent="." unique_id=1870043385]
 unique_name_in_owner = true
 tracker = &"/user/hand_tracker/left"
 show_when_tracked = true
 
-[node name="OpenXRFbHandTrackingMesh" type="OpenXRFbHandTrackingMesh" parent="LeftHand"]
+[node name="OpenXRFbHandTrackingMesh" type="OpenXRFbHandTrackingMesh" parent="LeftHand" unique_id=376359549]
 material = ExtResource("15_awdxe")
 
-[node name="XRHandModifier3D" type="XRHandModifier3D" parent="LeftHand/OpenXRFbHandTrackingMesh"]
+[node name="XRHandModifier3D" type="XRHandModifier3D" parent="LeftHand/OpenXRFbHandTrackingMesh" unique_id=1781242632]
 
-[node name="MenuIcon" type="MeshInstance3D" parent="LeftHand"]
+[node name="MenuIcon" type="MeshInstance3D" parent="LeftHand" unique_id=1832569206]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.055572636, 0.05749359, 0.07202678)
 visible = false
 mesh = SubResource("QuadMesh_gc58u")
 surface_material_override/0 = SubResource("StandardMaterial3D_qfus5")
 
-[node name="RightHand" type="XRNode3D" parent="."]
+[node name="RightHand" type="XRNode3D" parent="." unique_id=778247562]
 unique_name_in_owner = true
 tracker = &"/user/hand_tracker/right"
 show_when_tracked = true
 
-[node name="OpenXRFbHandTrackingMesh" type="OpenXRFbHandTrackingMesh" parent="RightHand"]
+[node name="OpenXRFbHandTrackingMesh" type="OpenXRFbHandTrackingMesh" parent="RightHand" unique_id=945029166]
 hand = 1
 material = ExtResource("15_awdxe")
 bones/0/name = "RightPalm"
@@ -283,9 +281,9 @@ bones/23/name = "RightLittleIntermediate"
 bones/24/name = "RightLittleDistal"
 bones/25/name = "RightLittleTip"
 
-[node name="XRHandModifier3D" type="XRHandModifier3D" parent="RightHand/OpenXRFbHandTrackingMesh"]
+[node name="XRHandModifier3D" type="XRHandModifier3D" parent="RightHand/OpenXRFbHandTrackingMesh" unique_id=680732222]
 hand_tracker = &"/user/hand_tracker/right"
 
-[node name="LeftHandAim" type="XRController3D" parent="."]
+[node name="LeftHandAim" type="XRController3D" parent="." unique_id=664069016]
 unique_name_in_owner = true
 tracker = &"/user/fbhandaim/left"

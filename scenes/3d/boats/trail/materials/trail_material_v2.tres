@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=7 format=3 uid="uid://lbqvw0btqgoe"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://lbqvw0btqgoe"]
 
 [ext_resource type="Shader" uid="uid://ux33f4k8iwkg" path="res://scenes/3d/boats/trail/materials/foam_shader_low.gdshader" id="1_n32ak"]
 [ext_resource type="Texture2D" uid="uid://d0wf06n4yl841" path="res://scenes/3d/boats/trail/textures/foam_noise_texture.png" id="2_ujv2t"]

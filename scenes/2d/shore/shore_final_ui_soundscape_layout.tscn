@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bnec6ccbwmnjl"]
+[gd_scene format=3 uid="uid://bnec6ccbwmnjl"]
 
 [ext_resource type="Texture2D" uid="uid://bdocdmd6hf3da" path="res://scenes/2d/textures/info_panel_bg.png" id="1_exwsn"]
 [ext_resource type="Texture2D" uid="uid://yafxev7i2lb" path="res://scenes/2d/textures/sound_wave.png" id="3_g2p4e"]
@@ -13,19 +13,19 @@ thickness = 8
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w0sx8"]
 
-[node name="ShoreFinalSoundscapeUILayout" type="Control"]
+[node name="ShoreFinalSoundscapeUILayout" type="Control" unique_id=1337845258]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 
-[node name="BackgroundPanel" type="Panel" parent="."]
+[node name="BackgroundPanel" type="Panel" parent="." unique_id=864533280]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_yp67b")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=103360617]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
@@ -34,72 +34,72 @@ theme_override_constants/margin_top = 75
 theme_override_constants/margin_right = 75
 theme_override_constants/margin_bottom = 75
 
-[node name="VBox" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBox" type="VBoxContainer" parent="MarginContainer" unique_id=1453161992]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.7
 theme_override_constants/separation = 45
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBox"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBox" unique_id=720095590]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBox/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBox/HBoxContainer" unique_id=1163502207]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="TitleLabel" type="Label" parent="MarginContainer/VBox/HBoxContainer/VBoxContainer"]
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBox/HBoxContainer/VBoxContainer" unique_id=2007581629]
 layout_mode = 2
 theme = ExtResource("3_tqdd0")
 theme_type_variation = &"TitleLabel"
 text = "SHORE_FINAL_UI_SOUNDSCAPE_TITLE"
 
-[node name="ContentLabel" type="Label" parent="MarginContainer/VBox/HBoxContainer/VBoxContainer"]
+[node name="ContentLabel" type="Label" parent="MarginContainer/VBox/HBoxContainer/VBoxContainer" unique_id=894776680]
 layout_mode = 2
 theme = ExtResource("3_tqdd0")
 theme_type_variation = &"ContentLabel"
 text = "SHORE_FINAL_UI_SOUNDSCAPE_SUBTITLE"
 autowrap_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBox/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBox/HBoxContainer" unique_id=809084501]
 layout_mode = 2
 size_flags_horizontal = 10
 texture = ExtResource("3_g2p4e")
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBox"]
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBox" unique_id=270453298]
 layout_mode = 2
 theme_override_constants/separation = 8
 theme_override_styles/separator = SubResource("StyleBoxLine_b64ud")
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBox"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBox" unique_id=1173523550]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="SoundTitleLabel" type="Label" parent="MarginContainer/VBox/VBoxContainer2"]
+[node name="SoundTitleLabel" type="Label" parent="MarginContainer/VBox/VBoxContainer2" unique_id=866721872]
 layout_mode = 2
 theme = ExtResource("3_tqdd0")
 theme_type_variation = &"SubtitleLabel"
 text = "SHORE_FINAL_UI_SOUNDSCAPE_SOUNDS_LABEL"
 
-[node name="SoundContentLabel" type="Label" parent="MarginContainer/VBox/VBoxContainer2"]
+[node name="SoundContentLabel" type="Label" parent="MarginContainer/VBox/VBoxContainer2" unique_id=2049827515]
 layout_mode = 2
 theme = ExtResource("3_tqdd0")
 theme_type_variation = &"ContentLabel"
 text = "SHORE_FINAL_UI_SOUNDSCAPE_SOUNDS_CONTENT"
 autowrap_mode = 2
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBox/VBoxContainer2"]
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBox/VBoxContainer2" unique_id=1601049394]
 layout_mode = 2
 theme_override_constants/separation = 46
 theme_override_styles/separator = SubResource("StyleBoxEmpty_w0sx8")
 
-[node name="ImpactTitleLabel" type="Label" parent="MarginContainer/VBox/VBoxContainer2"]
+[node name="ImpactTitleLabel" type="Label" parent="MarginContainer/VBox/VBoxContainer2" unique_id=1316106398]
 layout_mode = 2
 theme = ExtResource("3_tqdd0")
 theme_type_variation = &"SubtitleLabel"
 text = "SHORE_FINAL_UI_SOUNDSCAPE_IMPACTS_LABEL"
 
-[node name="ImpactContentLabel" type="Label" parent="MarginContainer/VBox/VBoxContainer2"]
+[node name="ImpactContentLabel" type="Label" parent="MarginContainer/VBox/VBoxContainer2" unique_id=1085089353]
 layout_mode = 2
 theme = ExtResource("3_tqdd0")
 theme_type_variation = &"ContentLabel"

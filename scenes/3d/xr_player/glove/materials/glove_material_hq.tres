@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://g788pbrkpdin"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://g788pbrkpdin"]
 
 [ext_resource type="Shader" uid="uid://cwrv6gebmho45" path="res://scenes/3d/shared/materials/base_shader_col_nrm_rough_metal.gdshader" id="2_wbvti"]
 [ext_resource type="Texture2D" uid="uid://bk5apocotacu3" path="res://scenes/3d/xr_player/glove/textures/gloves_albedo_1024.png" id="3_7gmvy"]

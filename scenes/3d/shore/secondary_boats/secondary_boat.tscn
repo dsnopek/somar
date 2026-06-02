@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4ad2w1cix5qe"]
+[gd_scene format=3 uid="uid://d4ad2w1cix5qe"]
 
 [ext_resource type="Script" uid="uid://7inhmbofiik1" path="res://scenes/3d/shore/secondary_boats/secondary_boat.gd" id="1_5hxm5"]
 [ext_resource type="Curve3D" uid="uid://dyxrw3qo0oiec" path="res://scenes/3d/shore/secondary_boats/paths/secondary_boat_r_path_0.tres" id="2_i2jum"]
@@ -7,16 +7,16 @@
 _data = [Vector2(0, 0), 0.0, 1.07222, 0, 1, Vector2(0.9, 0.965), 1.05556, 0.5, 0, 0, Vector2(1, 1), 0.0, 0.666667, 0, 0]
 point_count = 3
 
-[node name="SecondaryBoat" type="Node3D"]
+[node name="SecondaryBoat" type="Node3D" unique_id=751444194]
 script = ExtResource("1_5hxm5")
 end_drift_curve = SubResource("Curve_u33cu")
 
-[node name="Path3D" type="Path3D" parent="."]
+[node name="Path3D" type="Path3D" parent="." unique_id=1349264957]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 0, 0, 0)
 curve = ExtResource("2_i2jum")
 
-[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=1029621006]
 unique_name_in_owner = true
-transform = Transform3D(0.36577395, 0, 0.9307211, 0, 1.0007801, 0, -0.93070406, 0, 0.36578065, 160, 0, -108.876)
+transform = Transform3D(0.36577395, 0, 0.9307211, 0, 1.0007803, 0, -0.93070406, 0, 0.36578065, 160, 0, -108.876)
 rotation_mode = 4

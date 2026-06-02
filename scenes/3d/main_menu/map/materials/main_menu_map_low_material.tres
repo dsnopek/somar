@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://da4c7rkave6nk"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://da4c7rkave6nk"]
 
 [ext_resource type="Shader" uid="uid://mij30kafdgmq" path="res://scenes/3d/main_menu/map/materials/main_menu_map_hq_shader.gdshader" id="1_lb2xs"]
 [ext_resource type="Texture2D" uid="uid://bj6mk6hpwd8na" path="res://scenes/3d/main_menu/map/textures/SOMAR_locations_map_4k.png" id="2_3h0k5"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dabtp6yj17yab"]
+[gd_scene format=3 uid="uid://dabtp6yj17yab"]
 
 [ext_resource type="Material" uid="uid://dp4l7aag6x7kh" path="res://scenes/3d/boats/trail/materials/trail_material.tres" id="1_d6daw"]
 [ext_resource type="Script" uid="uid://c4ye1lsnj34yp" path="res://utilities/shader_cache/particles_shader_cache.gd" id="1_jrcbb"]
@@ -45,11 +45,11 @@ interpolation_color_space = 2
 offsets = PackedFloat32Array(0, 0.0551724, 1)
 colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1)
 
-[node name="ParticlesShaderCache" type="Node3D"]
+[node name="ParticlesShaderCache" type="Node3D" unique_id=1253642913]
 visible = false
 script = ExtResource("1_jrcbb")
 
-[node name="FoamParticles" type="CPUParticles3D" parent="."]
+[node name="FoamParticles" type="CPUParticles3D" parent="." unique_id=492588747]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 extra_cull_margin = 200.0
 emitting = false
@@ -66,7 +66,7 @@ scale_amount_min = 0.9
 scale_amount_curve = SubResource("Curve_82cgd")
 color_ramp = SubResource("Gradient_ci5fx")
 
-[node name="FoamParticles1" type="CPUParticles3D" parent="."]
+[node name="FoamParticles1" type="CPUParticles3D" parent="." unique_id=1433783158]
 extra_cull_margin = 200.0
 emitting = false
 amount = 40
@@ -86,7 +86,7 @@ scale_amount_max = 1.4
 scale_amount_curve = SubResource("Curve_4jyn6")
 color_ramp = SubResource("Gradient_attbj")
 
-[node name="BubblesParticles" type="CPUParticles3D" parent="."]
+[node name="BubblesParticles" type="CPUParticles3D" parent="." unique_id=1233353479]
 extra_cull_margin = 200.0
 emitting = false
 amount = 16
